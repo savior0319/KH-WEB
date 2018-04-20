@@ -178,3 +178,40 @@ target : action 동작시 페이지를 열것인지를 결정(_self, _blank)
 autocomplete : 이전 입력내용을 출력하는 기능, 생략 하면 자동출력 (default : on)
 ※ 자동 저장 기능 같은것
 ※ form 태그에 지정하면 form에 속하는 모든 input tag에 지정됨
+
+## <fieldset> , <legend> 태그 ##
+-> 폼 요소를 그룹으로 묶는 태그, 묶은 폼 요소에 명칭을 붙이는 태그
+
+
+## <input> 태그 ##
+-> 사용자로부터 data를 입력받기 위한 태그가
+
+속성
+type : 입력창의 타입을 결정하는 속성(text, checkbox, radio, select 등)
+        - text : 한 줄 짜르 텍스트입력 창이 생김 (입력하는 내용이 그대로 보임)
+        - password : 비밀번호 입력 창 (입력 시 ●●●●으로 표시 됨)
+        - hidden : 사용자에게 보이지는 않지만 값을 넣을 수 있는 창
+        - button : 버튼을 생성, 자체적으로는 별도 기능은 없고
+                   스크립트에서 함수를 연결하여 활용 함
+        - checkbox : 체크박스 생성
+        - file : 파일 입력 양식 출력
+        - image : 이미지 형태를 생성
+        - radio : 라디오 버튼 생성
+        - submit : 입력한 데이터를 다른 페이지로 넘기는 버튼 생성
+        - reset : 입력한 내용을 지우는 기능을 하는 버튼 생성
+
+        ※ type 속성의 값은 아래에서 다루도록 하겠음
+
+
+## 그외 속성들 ##
+
+value : input 요소의 기본값 표시
+name : input 마다 구별할 수 있는 명칭
+min/max/step : 하용하는 범위 최소값/최대값/증감값
+autocomplete : 자동완성 기능
+height/width : 입력창의 높이와 너비
+readonly : 읽기 전용 필드
+placeholder : 사용자 입력전 표시글
+maxlength : 사용자가 입력 할 수 있는 최대 글자수 제한
+minlength : 사용자가 입력 할 수 있는 최소 글자수 제한 (지원 안하는 브라주어가 많음)
+size : 화면에서 표시하는 글자수

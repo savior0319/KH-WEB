@@ -213,5 +213,5 @@ height/width : 입력창의 높이와 너비
 readonly : 읽기 전용 필드
 placeholder : 사용자 입력전 표시글
 maxlength : 사용자가 입력 할 수 있는 최대 글자수 제한
-minlength : 사용자가 입력 할 수 있는 최소 글자수 제한 (지원 안하는 브라주어가 많음)
+minlength : 사용자가 입력 할 수 있는 최소 글자수 제한 (지원 안하는 브라우저가 많음)
 size : 화면에서 표시하는 글자수

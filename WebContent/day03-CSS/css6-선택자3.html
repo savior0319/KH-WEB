@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    p[name~="t"] {
+        color: blue;
+        border: solid 5px red;
+        text-align: center;
+    }
+
+    p[name~="a"] {
+        color: red;
+        border: solid 5px blue;
+        text-align: center;
+    }
+
+    p[class|="class"] {
+        background: yellow;
+        text-align: center;
+        border: solid 5px red;
+    }
+</style>
+
+<body>
+    <p name="t 1" class="class-c1">내용1</p>
+    <p name="a 1" class="c2">내용2</p>
+    <p name="t 2" class="c3">내용3</p>
+    <p name="a 2" class="c4">내용4</p>
+    <p name="t 3" class="c5">내용5</p>
+    <p name="a 3" class="c6">내용6</p>
+    <p name="etc" class="class-c2">기타내용</p>
+</body>
+
+</html>

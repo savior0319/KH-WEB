@@ -1,0 +1,7 @@
+@ hidden
+-> 사용자에게 보이지는 않지만 값을 가지고 있는 속성
+
+name : hidden 속성 테이터 구분자 또는 명칭
+value : hidden에 들어갈 값 설정
+
+<input type=hidden name='명칭' value='값'>

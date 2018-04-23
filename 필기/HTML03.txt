@@ -110,3 +110,83 @@ value : 초기 표현 값
 ※ date : yyyy-mm-dd
 ※ datetime-local : yyyy-mm-ddT00:00(24)
 ※ month : yyyy-mm
+
+## time ##
+-> 시간을 지정할 수 있는 타입
+
+value : 초기 시간 지정
+
+<input type='time' id='명칭' value='00:00'>
+
+## number / range ##
+
+속성
+min : 최소 표시 숫자 지정
+max : 최대 표시 숫자 지정
+step : 숫자 간격 지정
+value : 초기 표현 값
+
+<input type=number / range name='명칭' min='숫자' max='숫자' value='숫자'>
+
+※ range는 크롬에서는 제대로 표시 되지 않음
+
+## search / url / email / tel ##
+
+작성법
+
+<input type='[search|url|email|tel]' name='명칭' value='초기값'>
+
+※ search & tel은 지원하는 웹 브라우저가 많지 않음
+
+## 여러 값 표현 태그 ##
+
+## select 태그 ##
+-> select list를 만드는 태그
+
+속성
+
+size : 화면에 표시될 항목 개수 지정
+multiple : 여러 항목을 선택 지정 (ctrl 누른 상태에서 선택)
+
+## option 태그 ##
+-> select 안에 표시 될 목록을 만드는 태그
+
+작성법
+
+<select size='숫자' name='명칭'>
+    <option value='값1'> 표시내용1 </option>
+    <option value='값2'> 표시내용2 </option>
+    <option value='값3' selected> 표시내용3 </option>
+</select>
+
+※ option에 selected 값을 주게 되면 선택 된 상태로 나오게 됨
+
+
+## optgroup 태그 ##
+-> 옵션을 그룹으로 묶어서 출력하는 태그
+
+작성법
+
+<select>
+    <optgroup label='목록이름 1'>
+        <option value='값1'> 표시내용1 <option>
+        <option value='값2'> 표시내용2 <option>
+    </optgroup>
+
+        <optgroup label='목록이름 2'>
+        <option value='값3'> 표시내용3 <option>
+        <option value='값4'> 표시내용4 <option>
+    </optgroup>
+</select>
+
+
+## datelist 태그 ##
+-> select 와 비슷하게 option을 이용하여 항목을 넘겨주는 태그
+
+작성법
+
+<input type='text' id='' list='datelistid값'>
+    <datelist id=''>
+        <option value='값' label='명칭'></option>
+        <option value='값' label='명칭'></option>
+    </datelist>

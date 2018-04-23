@@ -190,3 +190,7 @@ multiple : 여러 항목을 선택 지정 (ctrl 누른 상태에서 선택)
         <option value='값' label='명칭'></option>
         <option value='값' label='명칭'></option>
     </datelist>
+
+
+## textarea 태그 ##
+-> 긴 장문의 글을 작성할 때 사용하는 텍스트 영역

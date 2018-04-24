@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    option:enabled {
+        color: rgb(255, 105, 180);
+    }
+
+    option:disabled{
+        color: rgb(85, 107, 47);
+    }
+</style>
+
+<body>
+
+    <fieldset>
+        <legend>회원가입 (19세 이하 가입 불가)</legend>
+        ID : <input type="text" name="" id=""><br> 
+        PW : <input type="password" name="" id=""> <br> 
+        이름 : <input type="text" name="" id=""><br> 
+        나이 :
+        <select>
+            <option value="10" disabled>10대</option>
+            <option value="20">20대</option>
+            <option value="30">30대</option>
+            <option value="40">40대</option>
+            <option value="50">50대</option>
+            <option value="60">60대이상</option>
+        </select>
+
+    </fieldset>
+
+</body>
+
+</html>

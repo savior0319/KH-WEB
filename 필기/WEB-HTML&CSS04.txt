@@ -107,3 +107,97 @@ option태그:disabled -> 사용 불가능한 option 태그 선택
 선택자 -> :after -> 태그 뒤에 위치하는 공간을 선택
 선택자 -> :before -> 태그 앞에 위치하는 공간을 선택
 선택자 -> :selection -> 사용자가 드래그한 글자 선택
+
+@ 부정 선택자
+-> 선택자를 제외한 나머지를 말함
+
+요소 not(선택자)
+
+@ CSS 우선 순위
+
+## 적용 방법에 따른 우선 순위 ##
+스타일 태그 < class 스타일 < id 스타일 < 인라인 스타일 < !important
+
+※ !important가 가장 높은 우선 순위를 가짐
+
+## 동일한 선택자 일시 우선 순위
+
+-> 나중에 작성된 스타일이 최종 적용 됨
+
+@ CSS 단위 구성
+
+상대 크기
+-> % : 기본 설정된 크기에서 상대적인 크기 설정 (초기설정 100%)
+-> em : 부모 요소의 크기가 기준이 됨 (배수를 의미) 1배 = 1em = 100%, 1.5배 = 1.5em = 150%, 
+
+절대 크기
+-> px : 기본 지정된 크기
+-> pt : 기본 지정된 크기 (포인트 값)
+
+※ http://pxtoem.com
+
+@ 생산 표현
+영문식 이름 : 영문으로 색 이름을 작성
+    -> red, black, blue, orange 등등
+
+16진수 표현 : RGB 값을 기준으로 
+#16 진수 3자리 입력 
+ex) #ff0000(빨간색)
+
+rgb/rgba : RGB값을 0~255로 입력, RGBA는 투명도 표현도 가능
+    -> rgb(0~255, 0~255, 0~255) 입력 예시) rgb(255, 0, 0)
+    -> rgba(255, 0, 0, 0~1) 입력
+    -> rgba는 투명도 표시 (투명:0 / 불투명 : 1 / 반투명 : 0.5)
+
+@ font-family
+-> 폰트의 글꼴을 설정해주는 속성
+-> 글꼴이름1이 없으면 글꼴2, 글꼴3으로 선택되어 설정 됨
+-> 다 없으면 브라우저에게 사용되는 기본 글꼴로 적용 됨
+
+기본 형식
+
+선택자 { font-family : 글꼴1, [글꼴2, 글꼴3]; }
+
+@ font-size
+-> 글자의 크기를 조절하는 속성
+
+단위 : em, px, pt 등등...
+
+기본 형식
+
+선택자 { font-size: 숫자단위; }
+
+@ font-weight
+-> 글자 굵기를 조절하는 속성
+
+구분 값
+normal : 기본 형태
+bold : 굵게 표시
+bolder : 기본보다 더 굵게 표시
+lighter : 기본보다 더 가늘게 표시
+100 ~ 900 : 400이 normal 값 700이 bold 값 (세밀한 조절이 가능함)
+
+@ font-variant
+-> 소문자 영어를 작은 대문자로 표시해주는 속성
+
+기본 형식
+
+선택자 { font-variant : normal or small-caps; }
+
+@ font-style
+-> 글자를 이텔릭체로 표시하는 속성
+
+기본 형식
+
+선택자 { font-size : normal or italic or oblique; }
+    ※ italic : 처음부터 기울어진 글자가 존재
+    ※ oblique : 기본 글자를 기울여서 표시
+
+
+@ font
+-> 글꼴 속성을 모아서 표현 할 수 있는 스타일 속성
+-> font-size와 font-family는 꼭 적어야 함 (나머지는 생략 및 추가 가능함)
+
+선택자 { font:font-style font-variant font-weight font-size/line-height font-family; }
+
+※ line-height는 라인 높이

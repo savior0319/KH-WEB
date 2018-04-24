@@ -1,12 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>
+
+<style>
     
+    /* p::first-line {
+        color: chocolate;
+    } */
+
+    p::before {
+        content: "before";
+        color: chocolate;
+    }
+
+    p::after {
+        content: "after";
+        color: chocolate;
+    }
+
+    p::selection {
+        color: red;
+    }
+</style>
+
+<body>
+    <p>테스트 입니다
+        <br> 어떤가요
+    </p>
+
 </body>
+
 </html>

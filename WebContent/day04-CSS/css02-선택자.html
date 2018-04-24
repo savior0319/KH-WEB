@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    /* 후손 */
+    #div-1 h1 {
+        color: rgb(255, 105, 180);
+        border: rgb(255, 105, 180) solid 5px
+    }
+
+    /* 자손 */
+    #ul-1>li {
+        color: rgb(255, 105, 180);
+        border: rgb(255, 105, 180) solid 5px
+    }
+</style>
+
+<body>
+    <div id="div-1">
+        <h1>div 자손1</h1>
+        <h2>div 자손2</h2>
+        <ul id="ul-1">
+            <li>div 후손 and 자손1</li>
+            <li>div 후손 and 자손2</li>
+            <span>div 후손 and ul자손3</span>
+        </ul>
+    </div>
+</body>
+
+</html>

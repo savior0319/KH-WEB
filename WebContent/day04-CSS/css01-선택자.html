@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    p[id^="id"] {
+        color: rgb(255, 105, 180);
+    }
+
+    p[class$="c1"] {
+        background: rgb(255, 0, 255);
+    }
+
+    p[class*="p"] {
+        font-size: 20px;
+        color: rgb(0, 0, 255);
+        font-style: italic;
+        border: rgb(255, 0, 0) solid 5px;
+    }
+</style>
+
+<body>
+    <p name="t 1" id="i1" class="p-class-c1">내용1</p>
+    <p name="t 2" id="i" 2 class="c2">내용2</p>
+    <p name="t 3" id="i3" class="c3">내용3</p>
+    <p name="t 4" id="id4" class="c4">내용4</p>
+    <p name="t 5" id="id5" class="c5">내용5</p>
+    <p name="t 6" id="id6" class="c6">내용6</p>
+    <p name="etc" class="class-p-c2">기타내용</p>
+</body>
+
+</html>
+

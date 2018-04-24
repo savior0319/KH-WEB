@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    /* h1의 바로 뒤에있는 p */
+
+    /* h1+p {
+        color: red;
+    } */
+
+    /* h1과 p 둘 다 
+
+    h1~p {
+        color: red;
+    } */
+
+    /* h1~ul {
+        color: red;
+    } */
+
+    h1~ul>span{
+        border : 5px solid hotpink;
+    }
+
+</style>
+
+<body>
+
+    <div>
+        <h1>형제1</h1>
+        <p>형제2</p>
+        <p>형제3</p>
+        <ul>
+            <li>조카1</li>
+            <li>조카2</li>
+            <span>조카3</span>
+        </ul>
+    </div>
+
+</body>
+
+</html>

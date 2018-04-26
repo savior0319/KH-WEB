@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 600px;
+        height: 600px;
+        margin: 0;
+        border: double rgb(255, 25, 0) 15px;
+        background: rgba(255, 105, 180, 0.76);
+        position: relative;
+
+    }
+
+    div>div:nth-of-type(1) {
+        width: 60%;
+        height: 60%;
+        margin: 0;
+        border: dashed rgb(255, 0, 0) 15px;
+        background: rgba(34, 139, 34, 0.712);
+        left: 20%;
+        top: 20%;
+    }
+
+    div>div>div:nth-of-type(1) {
+        width: 30%;
+        height: 30%;
+        margin: 0;
+        left: 35%;
+        top: 35%;
+        border: dotted rgb(255, 25, 0) 30px;
+        box-sizing: border-box;
+        background: rgba(50, 34, 139, 0.685);
+    }
+</style>
+
+<body>
+
+    <div>
+        <div>
+            <div></div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        height: 600px;
+        width: 600px;
+        background: rgba(255, 105, 180, 0.575);
+        border: 15px dashed rgb(255, 0, 0);
+        position: relative;
+    }
+
+    div>p:nth-of-type(1) {
+        width: 60%;
+        height: 60%;
+        border: 15px dotted rgb(255, 0, 0);
+        background: rgba(111, 0, 255, 0.808);
+        margin: 0;
+
+        /* 위치 지정 relative */
+        position: absolute;
+        left: 20%;
+        top: 20%;
+
+        /* 부모(div)가 relative 속성을 가지고 있어야지
+       자식(div>p)이 absolute 가능*/
+    }
+
+    div>p:nth-of-type(2) {
+        background: rgba(196, 255, 108, 0.801);
+        border: 15px double rgb(255, 0, 0);
+        width: 25%;
+        height: 25%;
+        margin: 0;
+
+        position: absolute;
+        left: 37.5%;
+        top: 37.5%
+    }
+</style>
+
+<body>
+
+    <div>
+        <p></p>
+        <p></p>
+    </div>
+
+</body>
+
+</html>

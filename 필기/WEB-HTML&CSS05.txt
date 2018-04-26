@@ -286,7 +286,7 @@ fixed : 배경이미지가 움직이지 않게 설정
 
 or
 
-선택자 { background: linear-gradient(각도 or 방향, 시작색상, [색상 위치], 끝생상); }
+선택자 { background: linear-gradient(각도 or 방향, 시작색상, [색상 위치], 끝색상); }
 
 ## 방향 ##
 

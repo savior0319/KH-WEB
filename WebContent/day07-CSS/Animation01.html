@@ -16,19 +16,21 @@
         line-height: 70px;
         font-size: 20px;
         background: rgba(255, 105, 180, 0.5);
-        transition-duration: 1s;
     }
 
     div:hover {
-        font-size: 50px;
-        transition-duration: 1s;
         animation-name: ani;
+        animation-duration: 3s;
     }
 
     @keyframes ani {
         from {
             font-size: 20px;
         }
+        50% {
+            background: red;
+        }
+
         to {
             font-size: 40px;
         }

@@ -46,3 +46,6 @@ border-box : border까지 영역으로 설정
 
 ※ content-box는 size(width, height)를 정해주게 되면 content의 영역 크기만을 말하는 것
 border-box는 size(width, height)를 정해주게 되면 content, padding, border 영역을 포함한 크기를 말하는 것
+
+─────────────────────────────────────────────────────────────────────────────
+

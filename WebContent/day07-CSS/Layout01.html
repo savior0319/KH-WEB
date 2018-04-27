@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        box-sizing: border-box;
+    }
+
+    #main {
+        border: solid maroon 3px;
+        width: 800px;
+        height: 900px;
+    }
+
+    #header {
+        height: 10%;
+        background: yellowgreen;
+        font-size: 50px;
+    }
+
+    #content {
+        border-top: solid maroon 3px;
+        border-bottom: solid maroon 3px;
+        height: 70%;
+    }
+
+    #footer {
+        height: 20%;
+        background: hotpink;
+        font-size: 50px;
+    }
+
+    #content-left {
+        border-right: solid maroon 3px;
+        width: 30%;
+        height: 100%;
+        float: left;
+        background: skyblue;
+        font-size: 50px;
+    }
+
+    #content-right {
+        width: 70%;
+        height: 100%;
+        float: left;
+        background: tomato;
+        font-size: 50px;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="main">
+            <div id="header">header</div>
+            <div id="content">
+                <div id="content-left">left</div>
+                <div id="content-right">right</div>
+            </div>
+            <div id="footer">footer</div>
+
+
+        </div>
+    </center>
+
+</body>
+
+</html>

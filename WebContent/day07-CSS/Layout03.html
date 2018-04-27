@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        box-sizing: border-box;
+        font-size: 25px;
+    }
+
+    #main {
+        border: salmon solid 3px;
+        width: 800px;
+        height: 900px;
+    }
+
+    #header {
+        border: salmon solid 3px;
+        height: 15%;
+    }
+
+    #header>div:nth-of-type(1) {
+        border: salmon solid 3px;
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    #header>div:nth-of-type(2) {
+        border: salmon solid 3px;
+        width: 60%;
+        height: 100%;
+        float: left;
+    }
+
+    #header>div:nth-of-type(3) {
+        border: salmon solid 3px;
+        width: 20%;
+        height: 100%;
+        float: left;
+    }
+
+    #content {
+        border: salmon solid 3px;
+        height: 70%;
+    }
+
+
+    #content>div:nth-of-type(1) {
+        border: salmon solid 3px;
+        width: 15%;
+        height: 100%;
+        float: left;
+    }
+
+    #content>div:nth-of-type(2) {
+        border: salmon solid 3px;
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+
+    #content>div:nth-of-type(3) {
+        border: salmon solid 3px;
+        width: 35%;
+        height: 100%;
+        float: left;
+    }
+
+    #footer {
+        border: salmon solid 3px;
+        height: 15%;
+    }
+</style>
+
+<body>
+    <center>
+        <div id="main">
+            <div id="header">
+                <div>header1</div>
+                <div>header2</div>
+                <div>header3</div>
+            </div>
+            <div id="content">
+                <div>content1</div>
+                <div>content2</div>
+                <div>content3</div>
+            </div>
+            <div id="footer">footer</div>
+        </div>
+    </center>
+
+</body>
+
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        box-sizing: border-box;
+        font-size: 25px;
+    }
+
+    #main {
+        border: 3px solid salmon;
+        width: 800px;
+        height: 900px;
+    }
+
+    #header {
+        border: 3px solid salmon;
+        height: 15%;
+    }
+
+    #content {
+        border: 3px solid salmon;
+        height: 70%;
+    }
+
+    #content>div:nth-of-type(1) {
+        border: 3px solid salmon;
+        height: 100%;
+        width: 15%;
+        float: left;
+    }
+
+    #content>div:nth-of-type(2) {
+        border: 3px solid salmon;
+        height: 100%;
+        width: 60%;
+        float: left;
+    }
+
+    #content>div:nth-of-type(3) {
+        border: 3px solid salmon;
+        height: 100%;
+        width: 25%;
+        float: left;
+    }
+
+    #footer {
+        border: 3px solid salmon;
+        height: 15%;
+    }
+</style>
+
+
+
+<body>
+    <center>
+        <div id="main">
+            <div id="header">header</div>
+            <div id="content">
+                <div>content1</div>
+                <div>content2</div>
+                <div>content3</div>
+            </div>
+            <div id="footer">footer</div>
+        </div>
+
+
+</body>
+
+</html>

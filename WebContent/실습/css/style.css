@@ -399,3 +399,338 @@ button:hover{
 .fa-instagram {
     color: white;
 }
+
+/* main 페이지 content*/
+
+#main-frame1 {
+    width: 100%;
+    height: 20%;
+}
+
+#main-frame2 {
+    margin-left: 120px;
+    margin-top: 120px;
+    width: 100%;
+    height: 80%;
+    float: left;
+    padding: 50px;
+}
+
+#main-frame2-1 {
+    background: black;
+    color: white;
+    height: 100%;
+    width: 25%;
+    float: left;
+    margin-right: 50px;
+}
+
+#main-frame2-2 {
+    background: black;
+    color: white;
+    height: 100%;
+    width: 25%;
+    float: left;
+    margin-right: 50px;
+}
+
+#main-frame2-3 {
+    background: black;
+    color: white;
+    height: 100%;
+    width: 25%;
+    float: left;
+    margin-right: 50px;
+}
+
+/* 아티스트 */
+
+/* 아티스트 */
+
+#artcen {
+    background: rgba(19, 18, 18, 0.61);
+    height: 1000px;
+}
+
+#artist-title {
+    padding-top: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    color: white;
+}
+
+#arthr {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 1000px;
+}
+
+.art-row {
+    height: 29%;
+}
+
+.art-column {
+    height: 100%;
+    width: 33.33%;
+    float: left;
+}
+
+.art-name {
+    color: white;
+    background: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+/* 티켓 */
+
+#concen {
+    background: rgba(19, 18, 18, 0.61);
+    height: 1200px;
+}
+
+/* 구매 */
+
+.buy {
+    color: rgb(255, 115, 0);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#concen>hr {
+    margin-top: 20px;
+    width: 500px;
+}
+
+.buytitle {
+    color: white;
+    font-size: 20px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+.buycontent {
+    color: white;
+}
+
+.buy-1 {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.664);
+    width: 600px;
+    height: 80px;
+}
+
+.buy-1:hover {
+    background: rgb(46, 45, 45);
+}
+
+.buy-1:hover button {
+    background: tomato;
+}
+
+.buy-1-1 {
+    line-height: 37px;
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.buy-1-1>div:nth-of-type(1) {
+    color: orangered;
+}
+
+.buy-1-1>div:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.buy-1-2 {
+    line-height: 26px;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.buy-1-2>div:nth-of-type(1) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-1-2>div:nth-of-type(2) {
+    color: orangered;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.buy-1-2>div:nth-of-type(3) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-1-3 {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.buy-1-3>button {
+    background: rgba(0, 0, 0, 0.664);
+    border: 1px white solid;
+    color: white;
+    margin-top: 4px;
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+}
+
+/* end */
+
+/* 구매 */
+
+.buy-2 {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.664);
+    width: 600px;
+    height: 80px;
+}
+
+.buy-2:hover {
+    background: rgb(46, 45, 45);
+}
+
+.buy-2:hover button {
+    background: skyblue;
+}
+
+.buy-2-1 {
+    line-height: 37px;
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.buy-2-1>div:nth-of-type(1) {
+    color: skyblue;
+}
+
+.buy-2-1>div:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.buy-2-2 {
+    line-height: 26px;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.buy-2-2>div:nth-of-type(1) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-2-2>div:nth-of-type(2) {
+    color: skyblue;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.buy-2-2>div:nth-of-type(3) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-2-3 {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.buy-2-3>button {
+    background: rgba(0, 0, 0, 0.664);
+    border: 1px white solid;
+    color: white;
+    margin-top: 4px;
+    width: 100px;
+    height: 70px;
+    cursor: pointer;
+}
+
+/* end */
+
+/* 구매 */
+
+.buy-3 {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.664);
+    width: 600px;
+    height: 80px;
+}
+
+.buy-3:hover {
+    background: rgb(46, 45, 45);
+}
+
+.buy-3:hover button {
+    background: rgb(235, 135, 230);
+}
+
+.buy-3-1 {
+    line-height: 37px;
+    width: 30%;
+    height: 100%;
+    float: left;
+}
+
+.buy-3-1>div:nth-of-type(1) {
+    color: rgb(235, 135, 230);
+}
+
+.buy-3-1>div:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+}
+
+.buy-3-2 {
+    line-height: 26px;
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.buy-3-2>div:nth-of-type(1) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-3-2>div:nth-of-type(2) {
+    color: rgb(235, 135, 230);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.buy-3-2>div:nth-of-type(3) {
+    font-size: 14px;
+    color: white;
+}
+
+.buy-3-3 {
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.buy-3-3>button {
+    background: rgba(0, 0, 0, 0.664);
+    border: 1px white solid;
+    color: white;
+    margin-top: 4px;
+    width: 100px;
+    height: 70px;
+}
+
+/* end */

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+
+<script>
+    var countDownDate = new Date("June 8, 2018 21:00:00").getTime();
+    var x = setInterval(function () {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        document.getElementById("timer").innerHTML = days + "days, " + hours + ":" +
+            minutes + ":" + seconds;
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div id="logo">
+                <a href="index.html">
+                    <img src="../img/Korea-Logo.png" width="100%" height="90%" alt="">
+                </a>
+            </div>
+            <div id="nav-1">
+                <ul>
+                    <li>
+                        <a href="ticket.html">TICKETS</a>
+                    </li>
+                    <li id="test1">
+                        <a href="#">LINEUP ▼</a>
+                        <ul id="lineup">
+                            <li>
+                                <a href="lineup.html">PHASE 1</a>
+                            </li>
+                            <li>
+                                <a href="artists.html">ARTISTS</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">VVIP TABLE SERVICE</a>
+                    </li>
+                    <li>
+                        <a href="#">PREVIOUS LINEUPS</a>
+                    </li>
+                    <li>
+                        <a href="#">MEDIA ▼</a>
+                        <ul id="media">
+                            <li>GALLARY
+                            </li>
+                            <li>UMF FILM</li>
+                            <li>UMF TV</li>
+                            <li>UMF RADIO</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">MORE ▼</a>
+                        <ul id="more">
+                            <li>MOBILE APP</li>
+                            <li>GUIDE</li>
+                            <li>NEWS</li>
+                            <li>HELP</li>
+                            <li>VENDORS</li>
+                            <li>CONTACT US</li>
+                            <li>GET UPDATES</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">WORLDWIDE ▼</a>
+                        <ul id="WORLDWIDE">
+                            <li>ULTRAWORLD WIDE</li>
+                            <li>ROAD TO ULTRA</li>
+                            <li>RESISTANCE</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="nav-2">
+                <ul>
+                    <li>
+                        <a href="#"> CREATE MY ACCOUNT</a>
+                    </li>
+                    <div id="slash">/</div>
+                    <li>
+                        <a href="#">SIGN IN</a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img style="margin-top: 23px" src="../img/Korea-Flag.png" width="15px" height="15px" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img style="margin-top: 15px" src="../img/ultra-worldwide.png" width="70px" height="30px" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <div id="content1">1</div>
+            <div id="content2">
+                <br>
+                <br>
+                <br>
+                <center>
+                    <button class="content-btn1" onclick="location.href='ticket.html'">BUY TICKETS > </button>
+                    <button class="content-btn1" onclick="location.href='artists.html'">VIEW ARTISTS > </button>
+                </center>
+                <hr id="hr1">
+                <center>
+                    <img src="../img/lineup.jpg" width="80%" alt="">
+                </center>
+
+            </div>
+            <div id="content3">3</div>
+        </div>
+        <div class="footer">
+            <div id="footer-left"></div>
+            <div id="footer-center">
+
+
+                <div id="fu">
+                    <div id="footer-1">
+                        <center>
+                            <img src="../img/Korea-Logo.png" width="80%" alt="">
+                            <hr id="hr2"> June 8, 9, 10 — 2018
+                            <br>
+                            <br> Seoul, Korea 76°F
+                            <br>
+                            <br>
+                            <div id="timer"></div>
+                        </center>
+                    </div>
+                    <div id="footer-2">
+                        <br> Tickets
+                        <br> Lineup
+                        <br> Artists
+                        <br>Galleries
+                        <br> News
+                        <br> Mobile
+                        <br> App
+                        <br>
+                    </div>
+                    <div id="footer-3">
+                        <br> Ultra Worldwide
+                        <br> Road to Ultra
+                        <br>UMF Radio
+                        <br>Resistance Music
+                        <br>
+                    </div>
+                    <div id="footer-4">
+                        <div id="footer-4-1">
+                            <img src="../img/ultra-passport.png" width="130px" alt="">
+                            <img src="../img/platinum-u.png" width="30px" alt="">
+                            <img src="../img/gold-u.png" width="30px" alt="">
+                            <img src="../img/silver-u.png" width="30px" alt="">
+                        </div>
+                        <div id="footer-4-2">
+                            Don’t have an account? Sign up to register
+                            <br> for events, earn points, and more!
+                        </div>
+                        <div id="footer-4-3">
+                            <input type="text" name="" id="email" placeholder="Enter your email address to get started...">
+
+                        </div>
+                        <div id="footer-4-4">
+                            <button id="startbtn">Get Started > </button>
+                        </div>
+                    </div>
+                </div>
+                <div id="fd">
+                    <center>
+                        <a href="#" class="fa fa-instagram"></a>
+                        <a href="#" class="fa fa-youtube"></a>
+                        <br> © ULTRA ENTERPRISES INC. ALL RIGHTS RESERVED
+
+                        <br> PRIVACY / TERMS</center>
+                </div>
+                <div id="footer-right"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

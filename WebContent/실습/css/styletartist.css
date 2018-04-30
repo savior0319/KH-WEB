@@ -11,6 +11,15 @@ a {
     color: white;
 }
 
+a:hover {
+    color: hotpink;
+    transition-duration: 0.3s;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 /* 헤더 */
 
 .header {

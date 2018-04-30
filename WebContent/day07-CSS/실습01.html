@@ -2,261 +2,261 @@
 <html lang="ko">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="Generator" content="EditPlus®">
-    <meta name="Author" content="">
-    <meta name="Keywords" content="">
-    <meta name="Description" content="">
-    <title>레이아웃스타일4</title>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>레이아웃스타일4</title>
 
 </head>
 
 <style>
-    .outer {
-        width: 300px;
-        height: 300px;
-        background: yellow;
-        border: solid 1px black;
-        position: relative;
-    }
+  .outer {
+    width: 300px;
+    height: 300px;
+    background: yellow;
+    border: solid 1px black;
+    position: relative;
+  }
 
-    div:nth-of-type(1)>div:nth-of-type(2) {
-        width: 60%;
-        height: 60%;
-        background: yellowgreen;
-        border: solid 1px black;
-        left: 20%;
-        top: 20%;
-        position: absolute;
-    }
+  div:nth-of-type(1)>div:nth-of-type(2) {
+    width: 60%;
+    height: 60%;
+    background: yellowgreen;
+    border: solid 1px black;
+    left: 20%;
+    top: 20%;
+    position: absolute;
+  }
 
-    div:nth-of-type(1)>div:nth-of-type(3) {
-        width: 30%;
-        height: 30%;
-        background: rgb(255, 0, 0);
-        border: solid 1px black;
-        left: 35%;
-        top: 35%;
-        position: absolute;
-    }
+  div:nth-of-type(1)>div:nth-of-type(3) {
+    width: 30%;
+    height: 30%;
+    background: rgb(255, 0, 0);
+    border: solid 1px black;
+    left: 35%;
+    top: 35%;
+    position: absolute;
+  }
 
-    .positioning.fixed-area {
-        border: solid 1px black;
-        width: 100px;
-        height: 100px;
-        background: red;
-        position: fixed;
-    }
+  .positioning.fixed-area {
+    border: solid 1px black;
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: fixed;
+  }
 
-    .wrap {
-        width: 300px;
-        height: 300px;
-        position: relative
-    }
+  .wrap {
+    width: 300px;
+    height: 300px;
+    position: relative
+  }
 
-    .z-test.z-test1 {
-        border: 1px solid black;
-        width: 150px;
-        height: 100px;
-        background-color: yellow;
-        z-index: 3;
-        position: absolute;
-        left: 40%;
-        top: 40%;
-    }
+  .z-test.z-test1 {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    background-color: yellow;
+    z-index: 3;
+    position: absolute;
+    left: 40%;
+    top: 40%;
+  }
 
-    .z-test.z-test2 {
-        border: 1px solid black;
-        width: 150px;
-        height: 100px;
-        background-color: green;
-        z-index: 2;
-        position: absolute;
-        left: 20%;
-        top: 20%;
-    }
+  .z-test.z-test2 {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    background-color: green;
+    z-index: 2;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+  }
 
-    .z-test.z-test3 {
-        border: 1px solid black;
-        width: 150px;
-        height: 100px;
-        background-color: red;
-        z-index: 1;
+  .z-test.z-test3 {
+    border: 1px solid black;
+    width: 150px;
+    height: 100px;
+    background-color: red;
+    z-index: 1;
 
-    }
+  }
 
-    .float-test.float-test1 {
-        border: solid black 1px;
-        float: right;
-        width: 100px;
-        height: 50px;
-    }
+  .float-test.float-test1 {
+    border: solid black 1px;
+    float: right;
+    width: 100px;
+    height: 50px;
+  }
 
-    .float-test.float-test2 {
-        border: solid black 1px;
-        float: right;
-        width: 100px;
-        height: 50px;
-    }
+  .float-test.float-test2 {
+    border: solid black 1px;
+    float: right;
+    width: 100px;
+    height: 50px;
+  }
 
-    .float-test.float-test3 {
-        border: solid black 1px;
-        float: right;
-        width: 100px;
-        height: 50px;
-    }
+  .float-test.float-test3 {
+    border: solid black 1px;
+    float: right;
+    width: 100px;
+    height: 50px;
+  }
 
-    .float-test.float-test4 {
-        border: solid black 1px;
-        float: right;
-        width: 100px;
-        height: 50px;
-    }
+  .float-test.float-test4 {
+    border: solid black 1px;
+    float: right;
+    width: 100px;
+    height: 50px;
+  }
 
-    .float-test.float-test5 {
-        border: solid black 1px;
-        float: right;
-        width: 100px;
-        height: 50px;
-    }
+  .float-test.float-test5 {
+    border: solid black 1px;
+    float: right;
+    width: 100px;
+    height: 50px;
+  }
 </style>
 
 <body>
-    <h1>배치 관련 스타일</h1>
-    <h3>절대위치와 상대위치</h3>
-    <div class="outer">
-        <div class="positioning first"></div>
-        <div class="positioning second"></div>
-        <div class="positioning third"></div>
-    </div>
-    <h3>고정위치</h3>
-    <div class="positioning fixed-area"></div>
+  <h1>배치 관련 스타일</h1>
+  <h3>절대위치와 상대위치</h3>
+  <div class="outer">
+    <div class="positioning first"></div>
+    <div class="positioning second"></div>
+    <div class="positioning third"></div>
+  </div>
+  <h3>고정위치</h3>
+  <div class="positioning fixed-area"></div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 
-    <hr>
+  <hr>
 
-    <h3>z-index</h3>
-    <p>페이지 안의 요소들을 순서대로 위로 쌓는 속성이다.</p>
-    <div class="wrap">
-        <div class="z-test z-test1">요소1</div>
-        <div class="z-test z-test2">요소2</div>
-        <div class="z-test z-test3">요소3</div>
-    </div>
+  <h3>z-index</h3>
+  <p>페이지 안의 요소들을 순서대로 위로 쌓는 속성이다.</p>
+  <div class="wrap">
+    <div class="z-test z-test1">요소1</div>
+    <div class="z-test z-test2">요소2</div>
+    <div class="z-test z-test3">요소3</div>
+  </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <hr>
-    <h3>float속성</h3>
-    <p>페이지 내의 요소의 위치를 왼쪽이나 오른쪽으로 지정하는 속성</p>
-    <div class="float1">
-        <div class="float-test float-test1">111</div>
-        <div class="float-test float-test2">222</div>
-        <div class="float-test float-test3">333</div>
-        <div class="float-test float-test4">444</div>
-        <div class="float-test float-test5">555</div>
-    </div>
-
-
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <hr>
+  <h3>float속성</h3>
+  <p>페이지 내의 요소의 위치를 왼쪽이나 오른쪽으로 지정하는 속성</p>
+  <div class="float1">
+    <div class="float-test float-test1">111</div>
+    <div class="float-test float-test2">222</div>
+    <div class="float-test float-test3">333</div>
+    <div class="float-test float-test4">444</div>
+    <div class="float-test float-test5">555</div>
+  </div>
 
 
 
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
 </body>
 
 </html>

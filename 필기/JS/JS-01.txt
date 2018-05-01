@@ -201,7 +201,7 @@ getElementsByName("name명");
 -> 태그의 name 속성값을 이용해서 태그 엘리먼트와 객체 정보를 배열에 담아서 가져옴
 -> 같은 이름의 태그가 여러개 존재 할 수 있기 떄문에 기본적으로 배열로 리턴함
 
-getElementByTagName("tag명");
+getElementsByTagName("tag명");
 -> 태그명을 이용해서 해당 태그들의 객체 정보를 배열에 담에서 가져옴
 
 ## document.getElementById() ##
@@ -234,4 +234,25 @@ ex)
     console.log("1번째 : " + pp[0].innerHTML);
     console.log("2번째 : " + pp[1].innerHTML);
     console.log("3번째 : " + pp[2].innerHTML);
+</script>
+
+## document.getElementsByTagName() ##
+-> HTML 태그의 태그명을 이용해서 태그들을 한꺼번에 몽땅 가져와서 순서대로 제어함
+-> 리턴 값 : 배열 (태그 중복 가능)
+
+var 변수 = document.getElementsByTagName("태그명);
+    ※ 변수는 자동 배열이 됨
+
+ex)
+<p>ㄱㄱ</p>
+<p>ㄴㄴ</p>
+<p>ㄷㄷ</p>
+<p>ㄹㄹ</p>
+<p>ㅁㅁ</p>
+
+<script>
+    var arr = document.getElementsByTagName("p")
+    for(var i = 0; i < arr.length; i++){
+        console.log(arr[i].innerHTML);
+    }
 </script>

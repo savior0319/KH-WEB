@@ -28,6 +28,38 @@
     }, 1000);
 </script>
 
+<style>
+    /* 헤더 */
+
+    .header {
+        height: 60px;
+        width: 1903px;
+        position: fixed;
+    }
+
+    .content {
+        height: 1700px;
+        width: 1903px;
+    }
+
+    .footer {
+        height: 500px;
+        width: 1903px;
+    }
+
+    /* 전체 프레임 */
+
+    .main {
+        z-index: 1;
+        width: 1903px;
+        height: 2200px;
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-image: linear-gradient(rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25)), url("../img/background.jpg");
+    }
+</style>
+
 <body>
     <div class="main">
         <div class="header">
@@ -149,15 +181,32 @@
                 <br>
                 <br>
                 <br>
-                <center>
-                    <button class="content-btn1" onclick="location.href='ticket.html'">BUY TICKETS > </button>
-                    <button class="content-btn1" onclick="location.href='artists.html'">VIEW ARTISTS > </button>
-                </center>
-                <hr id="hr1">
-                <center>
-                    <img src="../img/lineup.jpg" width="80%" alt="">
-                </center>
+                <br>
+                <center id="concen1">
+                    <div id="vvip-title">VVIP</div>
+                    <div id="vvip-table-title">VVIP TABLE SERVICE</div>
+                    <center id="vipcon">
+                        <p id="p1">
+                            – VVIP 티켓은 최상급 티켓으로, 소지자는 VVIP 입장밴드와 전용 출입구를 이용하여 모든 스테이지 구역을 자유롭게 이용하실 수 있으며, 특별한 테이블들이 구비되어 있는 VVIP 전용 공간에서 ULTRA KOREA를
+                            즐길 수 있습니다.
+                            <br> – VVIP zone은 VVIP 입장밴드 소지자만이 입장할 수 있는 특별한 전용 라운지 공간으로 운영되며, 각 테이블은 VVIP 전용 웨이터 테이블 서비스가 제공됩니다.
+                            <br>
+                            <br> – ULTRA KOREA’s signature VVIP table provides festivalgoers a celebrity experience of hospitality
+                            and service.
+                            <br> – VVIP table includes the following :
+                            <br> + Access to your private table/sofa inside of the VVIP zone.
+                            <br> + Access to bottle service by professional VVIP staff.
+                            <br> + Access to venue via exclusive red carpeted VVIP entrance.
+                            <br> + Access to exclusive valet parking service.
+                            <br> + Access to VVIP-only private restrooms.
+                        </p>
 
+                        <div>
+                            <img src="../img/vvip.jpg" width="800px;" height="940px" alt="" srcset="">
+
+                        </div>
+                    </center>
+                </center>
             </div>
             <div id="content3">3</div>
         </div>

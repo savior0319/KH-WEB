@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    window.onload = function () {
+        var pp = document.getElementsByName("pp");
+        console.log("1번째 : " + pp[0].innerHTML);
+        console.log("2번째 : " + pp[1].innerHTML);
+        console.log("3번째 : " + pp[2].innerHTML);
+    }
+</script>
+
+<body>
+    <p name="pp">안녕하세요</p>
+    <p name="pp">자바스크립트</p>
+    <p name="pp">노잼</p>
+</body>
+
+</html>

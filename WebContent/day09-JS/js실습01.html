@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<script>
+    function myfunc1() {
+        var content = document.getElementById("div1");
+        content.innerHTML = "성공";
+    }
+
+    function myfunc2() {
+        var content = document.getElementById("test");
+        content.value = "성공";
+    }
+
+    function myfunc3() {
+        var content = document.getElementById("span");
+        var spanContent = content.innerHTML;
+        console.log(spanContent);
+    }
+
+    window.onload = function () {
+        var getType = document.getElementById("test2");
+        getType.type = "text";
+    }
+</script>
+
+
+<body>
+
+    <style>
+        body {
+            background: rgba(220, 220, 220, 0.904);
+            font-weight: 600;
+        }
+
+        center {
+            margin-top: 10px;
+        }
+
+        div {
+            padding: 10px;
+            margin-top: 10px;
+            border: 3px solid hotpink;
+            height: 100px;
+            width: 300px;
+        }
+
+        button {
+            margin-top: 5px;
+            width: 50px;
+            height: 30px;
+            border: 2px white;
+            font-size: 15px;
+            font-weight: 600;
+            background: darkgrey;
+            transition-duration: 0.5s;
+            color: rgb(53, 53, 53);
+        }
+
+        button:hover {
+            background: skyblue;
+            border: 2px solid rgba(241, 131, 128, 0.746);
+            transition-duration: 0.5s;
+        }
+
+        hr {
+            border: 1px rgb(1, 176, 245) solid;
+            width: 70%;
+        }
+    </style>
+    <center>
+        <h1>실습문제</h1>
+        <hr> 문제1. div 안에 있는 내용을 "성공" 으로 바꾸어 보세요
+        <br> (JavaScript로만 바꾸는걸 잊지마세요!)
+        <div id="div1">
+            저를 바꾸어보세요^^
+        </div>
+        <button onclick="myfunc1();">도전</button>
+        <br>
+        <br> 문제2. "바꿀수 있을까? 라는 문구를 "성공" 으로 바꾸어 보세요
+        <br>
+        <div id="div2">
+            <input type="text" id="test" value="바꿀수 있을까?" />
+        </div>
+        <button onclick="myfunc2();">도전</button>
+        <br>
+        <br> 문제3. 해당 값을 읽어서 개발자도구 : 콘솔에 출력해보세요
+        <div id="div3">
+            <p id="p1">
+                <span id="span">저를 읽어서 콘솔에 출력해보세요</span>
+            </p>
+        </div>
+        <button onclick="myfunc3();">도전</button>
+        <br>
+        <br> 문제4. 해당 태그의 타입을 변경하여 볼 수 있도록 해보세요(버튼이 없는 문제입니다.)
+        <div id="div4">
+            <input type="hidden" id="test2" value="성공">
+        </div>
+
+
+</body>
+
+</html>

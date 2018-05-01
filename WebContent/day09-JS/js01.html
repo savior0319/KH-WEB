@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    h1 {
+        text-align: center;
+    }
+
+    hr {
+        width: 70%;
+    }
+
+    button {
+        width: 500px;
+        height: 50px;
+        border-radius: 15px;
+        border: none;
+        transition-duration: 0.5s;
+        font-size: 25px;
+        font-weight: 600;
+        line-height: 40px;
+        color: maroon;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        border: white 3px solid;
+        display: block;
+    }
+
+    button:hover {
+        background: skyblue;
+        transition-duration: 0.5s;
+        color: white;
+        border: navy 3px solid;
+    }
+</style>
+
+<!-- external 방식 -->
+<script src="test.js">
+    // inline 방식
+    function clicked() {
+        alert("inline");
+    }
+
+    // // internal 방식 
+    window.onload = function () {
+        document.getElementById("btn1").onclick = function () {
+            alert("internal");
+        }
+
+
+    }
+</script>
+
+<body>
+    <h1>JAVA SCRIPT</h1>
+    <hr>
+    <center>
+        <h3>inline</h3>
+        <button onclick="clicked();">클릭</button>
+        <hr>
+        <h3>internal</h3>
+        <button id="btn1">클릭</button>
+        <hr>
+        <h3>external</h3>
+        <button id="btn2">클릭</button>
+        <hr>
+        <button id="btn3">document.write</button>
+
+    </center>
+</body>
+
+</html>

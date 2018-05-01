@@ -16,7 +16,7 @@ a:hover {
     transition-duration: 0.3s;
 }
 
-button:hover{
+button:hover {
     cursor: pointer;
 }
 
@@ -742,27 +742,28 @@ button:hover{
 
 /* VVIP */
 
-#vvip-title{
+#vvip-title {
     font-size: 30px;
-    color : white;
+    color: white;
     padding-top: 50px;
     padding-right: 900px;
 }
 
-#vvip-table-title{
+#vvip-table-title {
     font-size: 40px;
     color: yellow;
     font-weight: 600;
     padding-top: 40px;
     padding-right: 500px;
 }
-#vipcon{
+
+#vipcon {
     background: rgba(0, 0, 0, 0.55);
     width: 60%;
     height: 1400px;
 }
 
-#p1{
+#p1 {
     color: white;
     font-size: 14.5px;
     padding: 80px;

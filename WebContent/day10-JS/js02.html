@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function test() {
+        var getTag = document.getElementsByTagName("div");
+        console.log("대문자 :" + getTag[0].innerHTML.toUpperCase());
+        console.log("길이 : " + getTag[0].innerHTML.length);
+        console.log("indexOf = c : " + Number(getTag[0].innerHTML.indexOf('c') + 1) + "번째");
+        console.log("lastIndexOf = b : " + Number(getTag[0].innerHTML.lastIndexOf('b') + 1) + "번째");
+        console.log("charAt : " + getTag[0].innerHTML.charAt());
+        console.log("substring (0, 2): " + getTag[0].innerHTML.substring(0, 2));
+        var arr = getTag[0].innerHTML.split(",");
+        console.log(arr);
+    }
+</script>
+
+<style>
+    div {
+        border: 1px solid black;
+        height: 100px;
+        width: 100px;
+        overflow: auto;
+    }
+</style>
+
+<body>
+    <div>ab,c</div>
+    <button onclick="test();">클릭</button>
+</body>
+
+</html>

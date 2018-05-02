@@ -1,3 +1,3 @@
 function samp() {
-    alert("samp() 함수 호출");
+    alart("samp() 함수 호출");
 }

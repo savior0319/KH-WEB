@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    // 전역변수 1 - var
+    var c = "300";
+
+    // 전역변수 2 - var (x)
+    d = "400";
+
+    function name1() {
+        // 전역변수 3 - name1() 함수가 실행 되야지 변수가 생성됨
+        e = "500";
+
+        var a = "100";
+        console.log("지역변수 : " + a);
+        console.log("전역변수1 : " + c);
+        console.log("전역변수2 : " + d);
+        console.log("전역변수3 : " + e);
+    }
+
+    function name2() {
+        var b = "200";
+        console.log(b);
+        console.log(c);
+
+        console.log("전역변수3 : " + e);
+    }
+</script>
+
+<body>
+
+    <button onclick="name1();">버튼1</button>
+    <button onclick="name2();">버튼2</button>
+
+</body>
+
+</html>

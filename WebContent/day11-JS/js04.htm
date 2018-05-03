@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    var arr1 = new Array(1, 2, 3); // 초기 값을 넣고 배열이 생성됨
+    var arr2 = [1, 2, 3]; // new 연산자를 쓰지 않아도 배열이 자동 생성 됨
+    var arr3 = new Array(); // 초기 값을 넣지 않도록 배열을 생성 할 수 있음
+    var arr4 = new Array(5);
+    var arr5 = [10, 'text', true, [1, 2, 3, 4]];
+    arr4[0] = 123;
+    arr4[1] = 132;
+    arr4[2] = 213;
+    arr4[3] = 231;
+    arr4[4] = 312;
+
+    console.log(arr1);
+    console.log(arr2);
+    console.log(arr3);
+    console.log(arr4);
+    console.log(arr5);
+
+    arr4.forEach((arr, index) => {
+        console.log(arr)
+    });
+</script>
+
+<body>
+
+</body>
+
+</html>

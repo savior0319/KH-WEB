@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function btn1() {
+        var div1 = document.getElementById("div-1");
+        var result1 = 7 + 7;
+        var result2 = 7 + "7";
+        var result3 = "7" + 7;
+        var result4 = "7" + "7";
+        var result5 = 7 + 7 + "7";
+        var result6 = 7 + "7" + 7;
+        var result7 = "7" + 7 + 7;
+        var result8 = "7" + (7 + 7);
+
+        div1.innerHTML += "숫자 -> 문자열 <br><br>"
+        div1.innerHTML += result1 + "<br>";
+        div1.innerHTML += result2 + "<br>";
+        div1.innerHTML += result3 + "<br>";
+        div1.innerHTML += result4 + "<br>";
+        div1.innerHTML += result5 + "<br>";
+        div1.innerHTML += result6 + "<br>";
+        div1.innerHTML += result7 + "<br>";
+        div1.innerHTML += result8 + "<hr>";
+    }
+
+    function btn2() {
+        var div1 = document.getElementById("div-1");
+        var num1 = 2;
+        var num2 = "3";
+
+        div1.innerHTML += "문자열 -> 숫자 <br><br>"
+        div1.innerHTML += num1 + num2 + "<br>";
+        div1.innerHTML += num1 - Number(num2) + "<br>";
+        div1.innerHTML += num1 + parseInt(num2) + "<br>";
+        div1.innerHTML += num1 + parseFloat(num2) + "<br>";
+        div1.innerHTML += num1 - num2 + "<br>";
+        div1.innerHTML += num1 * num2 + "<br>";
+        div1.innerHTML += num1 / num2 + "<br>";
+        div1.innerHTML += num1 % num2 + "<hr>";
+    }
+
+    function btn3() {
+        var div1 = document.getElementById("div-1");
+        var num1 = 1;
+        var num2 = "1";
+
+        div1.innerHTML += "=== 연산자 <br><br>"
+        div1.innerHTML += (num1 === 1) + "<br>";
+        div1.innerHTML += (num1 === '1') + "<br>";
+        div1.innerHTML += (num1 == '1') + "<br>";
+        div1.innerHTML += (num2 === 1) + "<br>";
+        div1.innerHTML += (num2 == 1) + "<br>";
+        div1.innerHTML += (num2 === '1') + "<br>";
+        num1 = Number(num2) ? div1.innerHTML += "num1와 num2는 같습니다<hr>" : div1.innerHTML += "num1와 num2는 다릅니다<hr>";
+    }
+
+    function btn4() {
+        var num1 = 1;
+        var num2 = 2;
+        var div1 = document.getElementById("div-1");
+
+        div1.innerHTML += "짧은 조건문 <br><br>"
+        num1 > num2 || (div1.innerHTML += "num2가 더 큽니다<hr>");
+        num1 > num2 && (div1.innerHTML += "num1이 더 큽니다<hr>");
+    }
+</script>
+
+<style>
+    #div-1 {
+        border: 3px solid maroon;
+        width: 400px;
+        height: 400px;
+        font-size: 20px;
+        font-weight: 600;
+        overflow: auto;
+    }
+
+    .btn-1 {
+        color: darkmagenta;
+        background: skyblue;
+        font-weight: 600;
+        font-size: 20px;
+        border: none;
+        width: 200px;
+        height: 50px;
+        margin-top: 20px;
+        display: block;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>형변환</h1>
+        <div id="div-1"></div>
+        <button class="btn-1" onclick="btn1()">숫자 > 문자열</button>
+        <button class="btn-1" onclick="btn2()">문자열 > 숫자</button>
+        <button class="btn-1" onclick="btn3()">=== & 삼항연산자</button>
+        <button class="btn-1" onclick="btn4()">짧은 조건문</button>
+</body>
+
+</html>

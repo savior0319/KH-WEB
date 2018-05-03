@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<script>
+    var isFlag = false;
+
+    function checkLogic() {
+        var checkNum = Number(window.prompt("숫자를 입력하세요"));
+
+        checkNum % 2 == 1 && alert('홀수입니다');
+        checkNum % 2 == 0 && alert('짝수입니다');
+    }
+
+    function choice(member) {
+
+        var getImg = document.getElementsByTagName("img");
+
+        if (member == 'jj' && isFlag == false) {
+            getImg[0].style.width = "400px";
+            getImg[0].style.height = "400px";
+            getImg[0].style.border = "dotted 10px red";
+            getImg[1].style.display = "none";
+            isFlag = true;
+        } else if (member == 'jj' && isFlag == true) {
+            getImg[0].style.width = "200px";
+            getImg[0].style.height = "200px";
+            getImg[1].style.display = "inline";
+            getImg[0].style.border = "none";
+            isFlag = false;
+        }
+
+        if (member == 'ss' && isFlag == false) {
+            getImg[1].style.width = "400px";
+            getImg[1].style.height = "400px";
+            getImg[1].style.border = "dotted 10px blue";
+            getImg[0].style.display = "none";
+            isFlag = true;
+        } else if (member == 'ss' && isFlag == true) {
+            getImg[1].style.width = "200px";
+            getImg[1].style.height = "200px";
+            getImg[0].style.display = "inline";
+            getImg[1].style.border = "none";
+            isFlag = false;
+        }
+    }
+</script>
+
+<body>
+    <h1>연산자 문제</h1>
+
+    <h3>연산자를 이용한 짧은 조건문 사용 테스트 (|| 와 &&를 사용하세요)</h3>
+    <button onclick="checkLogic();">실행확인</button>
+
+    <br>
+    <br>
+    <hr>
+    <hr>
+    <br>
+    <br>
+    <h3>문제2. 다음 중 이쁜 사람은 누구인가요?
+        <h3>
+            <img src="jj.jpg" height="200px" width="200px" onclick="choice('jj');" />
+            <img src="ss.jpg" height="200px" width="200px" onclick="choice('ss');" />
+
+</body>
+
+</html>

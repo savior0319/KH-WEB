@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function siteMove() {
+        var siteName = document.getElementById("site").value;
+        if (siteName == "네이버") {
+            window.open("http://naver.com/")
+        } else if (siteName == "구글") {
+            window.open("http://google.com/")
+        } else if (siteName == "다음") {
+            window.open("http://daum.net/")
+        } else {
+            alert("지원하지 않는 사이트 입니다");
+        }
+    }
+</script>
+
+<body>
+    <center>
+        <input type="text" name="" id="site">
+        <br>
+        <button onclick="siteMove();">버튼</button>
+</body>
+
+</html>

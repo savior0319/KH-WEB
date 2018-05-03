@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function arrayTest() {
+        var arr = new Array(3);
+        arr[0] = test1;
+        arr[1] = test2;
+        arr[2] = test3;
+        arr[0]();
+        arr[1]();
+        arr[2]();
+    }
+
+    function test1() {
+        alert('1');
+    }
+
+    function test2() {
+        alert('2');
+    }
+
+    function test3() {
+        alert('3');
+    }
+</script>
+
+<body>
+    <button onclick="arrayTest();">버튼</button>
+</body>
+
+</html>

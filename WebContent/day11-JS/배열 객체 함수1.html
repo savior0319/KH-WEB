@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    function arrayBtn() {
+        var fruit = ['바나나', '딸기', '복숭아', '수박'];
+        var id = document.getElementById("likeFruit");
+        var result = document.getElementById("result");
+        var index = fruit.indexOf(id.value);
+        if (index >= 0) {
+            result.innerHTML = "배열의 " + (index + 1) + "번 째에 해당되는 과일입니다";
+        } else {
+            result.innerHTML = "배열에 없는 과일 입니다"
+        }
+    }
+
+    function arrayBtn1() {
+        var food1 = ['사과', '딸기'];
+        var food2 = ['햄버거', '피자, 치킨'];
+        var number = [10, 20, 30, 40, 50, 60];
+        var bool = [true, false];
+
+        var result1 = document.getElementById("result1");
+
+        result1.innerHTML += "<br><br>1." + food1 + "<br>";
+        result1.innerHTML += "2. " + food2 + "<br>";
+        result1.innerHTML += "3. " + number + "<br>";
+        result1.innerHTML += "4. " + bool + "<br>";
+
+        var arrays = food1.concat(food2, number, bool);
+        result1.innerHTML += "<br>concat -> " + arrays + "<br>";
+    }
+
+    function arrayBtn2() {
+        var number = [10, 20, 30, 40, 50, 60];
+        var newArr = number.join(" ");
+
+        result2 = document.getElementById("result2");
+
+        result2.innerHTML = newArr;
+    }
+
+    function arrayBtn3() {
+        var number = [10, 20, 30, 40, 50, 60];
+        number.reverse();
+        result3 = document.getElementById("result3");
+
+        result3.innerHTML = number;
+    }
+
+    function arrayBtn4() {
+        var number = [10, 7, 3, 4, 2, 1];
+        number.sort(asc); // 함수명 사용해서 숫자 오름차순 정렬
+        result4 = document.getElementById("result4");
+
+        result4.innerHTML = number;
+    }
+
+    // 오름차순
+    function asc(a, b) {
+        return a - b;
+    }
+    // 내림차순
+    function desc(a, b) {
+        return b - a;
+    }
+</script>
+
+<style>
+    div {
+        display: inline;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    hr {
+        width: 65%;
+    }
+</style>
+
+<body>
+
+    <h1>배열 객체 함수</h1>
+    <hr>
+    <!-- indexof -->
+    <h3>다음 중 좋아하는 과일을 작성하시오(indexOf)</h3>
+    <p>바나나 / 딸기 / 복숭아 / 수박</p>
+    <input type="text" name="" id="likeFruit">
+    <button onclick="arrayBtn();">입력</button>
+    <br>
+    <div>결과 :
+        <div id="result"></div>
+    </div>
+    <hr>
+    <!-- concat -->
+    <h3>concat</h3>
+    <button onclick="arrayBtn1();">클릭</button>
+    <br>
+    <div id="result1">결과 : </div>
+    <hr>
+    <!-- join -->
+    <h3>join</h3>
+    <button onclick="arrayBtn2();">클릭</button>
+    <br>
+    <div>결과 :
+        <div id="result2"></div>
+    </div>
+    <hr>
+    <!-- reverse -->
+    <h3>reverse</h3>
+    <button onclick="arrayBtn3();">클릭</button>
+    <br>
+    <div>결과 :
+        <div id="result3"></div>
+    </div>
+    <hr>
+    <!-- sort -->
+    <h3>sort[10, 7, 3, 4, 2, 1]</h3>
+    <button onclick="arrayBtn4();">클릭</button>
+    <br>
+    <div>결과 :
+        <div id="result4"></div>
+    </div>
+    <hr>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<script>
+    var arr = [];
+    var count = 1;
+
+    function btn1() {
+        if (document.getElementById("text-1").value == "") {
+            alert('값을 입력하세요');
+        } else {
+            arr.push(document.getElementById("text-1").value);
+            var result1 = document.getElementById("result1");
+
+            result1.innerHTML += (count++) + ". " + arr + "<br>";
+
+            var remove = document.getElementById("text-1");
+            remove.value = "";
+        }
+    }
+
+    function btn2() {
+        if (arr.length == 0) {
+            alert('배열에 삭제할 값이 없습니다');
+        } else {
+            arr.pop();
+            var result1 = document.getElementById("result1");
+
+            result1.innerHTML += (count++) + ". " + arr + "<br>";
+        }
+    }
+
+    function btn3() {
+        if (document.getElementById("text-2").value == "") {
+            alert('값을 입력하세요');
+        } else {
+            arr.unshift(document.getElementById("text-2").value);
+            var result2 = document.getElementById("result2");
+
+            result2.innerHTML += (count++) + ". " + arr + "<br>";
+
+            var remove = document.getElementById("text-2");
+            remove.value = "";
+        }
+    }
+
+    function btn4() {
+        if (arr.length == 0) {
+            alert('배열에 삭제할 값이 없습니다');
+        } else {
+            arr.shift();
+            var result2 = document.getElementById("result2");
+
+            result2.innerHTML += (count++) + ". " + arr + "<br>";
+        }
+    }
+</script>
+
+<style>
+    hr {
+        width: 65%;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #result1 {
+        text-align: left;
+        margin-left: 35%;
+    }
+
+    #result2 {
+        text-align: left;
+        margin-left: 35%;
+    }
+</style>
+
+<body>
+    <h1>배열 객체 함수2</h1>
+    <hr>
+    <h1>pop & push</h1>
+    <input type="text" name="" id="text-1">
+    <button onclick="btn1();">추가</button>
+    <button onclick="btn2();">삭제</button>
+    <div id="result1"></div>
+    <br>
+    <hr>
+    <h1>shift & unshift</h1>
+    <input type="text" name="" id="text-2">
+    <button onclick="btn3();">추가</button>
+    <button onclick="btn4();">삭제</button>
+    <div id="result2"></div>
+
+</body>
+
+</html>

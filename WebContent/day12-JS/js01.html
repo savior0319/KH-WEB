@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>js01</title>
+</head>
+
+<body>
+  <h1>함수 선언</h1>
+
+  <button onclick="test();">매개 변수도 없고, 넘겨주는 인자 값도 없는 함수</button>
+  <br>
+  <br>
+  <button onclick="test1(10);">매개변수는 있지만, 인자값이 없는 함수</button>
+  <br>
+  <br>
+  <button onclick="test2(10);">매개변수도 있고, 인자 값이 있는 함수</button>
+  <br>
+  <br>
+  <button onclick="test2();">매개변수는 없지만, 인자값이 있는 경우에 처리하는 함수</button>
+  <br>
+  <br>
+</body>
+
+<script>
+  function test() {
+    alert();
+  }
+
+  function test1() {
+    alert();
+  }
+
+  function test2(arg) {
+    alert(arg);
+  }
+
+  function test3(arg) {
+    alert(arg);
+  }
+</script>
+
+</html>

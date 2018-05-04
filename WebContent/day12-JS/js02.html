@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<script>
+  // test2()는 test1()이 선언 되기 전에는 사용 불가
+  var test2;
+
+  function test1() {
+    alert('test1');
+    test2 = function() {
+      alert('test2');
+    }
+  }
+</script>
+
+<body>
+  <button onclick="test1();">클릭</button>
+  <button onclick="test2();">클릭</button>
+</body>
+
+</html>

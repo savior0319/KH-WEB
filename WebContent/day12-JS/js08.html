@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>isFinite</h1>
+    <hr>
+    <h3>전화번호</h3>
+    010-
+    <input type="text" name="" id="firstNum" size=5 maxlength="4"> -
+    <input type="text" name="" id="secondNum" size=5 maxlength="4">
+    <button onclick="check();">입력</button>
+    <hr>
+</body>
+
+<script>
+    function check() {
+        var value1 = document.getElementById("firstNum").value;
+        var value2 = document.getElementById("secondNum").value;
+        if (isFinite(value1) && isFinite(value2) && value1 != "" && value2 != "") {
+            alert("전화 번호를 정상 입력했습니다");
+        } else {
+            alert("전화 번호를 잘못 입력했습니다");
+        }
+    }
+</script>
+
+</html>

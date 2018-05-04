@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #result {
+        width: 300px;
+        height: 70px;
+        border: maroon solid 5px;
+        margin-top: 15px;
+        overflow: auto;
+        margin-bottom: 20px;
+    }
+
+    hr {
+        width: 65%;
+    }
+</style>
+
+<body>
+    <center>
+        <h1>eval</h1>
+        <hr>
+        <p>첫 번째 수 :
+            <input type="text" name="" id="text1">
+        </p>
+        <p>
+            두 번째 수 :
+            <input type="text" name="" id="text2">
+        </p>
+        <p>자바스크립트 처리 :
+            <input type="text" name="" id="js" size="50">
+        </p>
+        <button onclick="test();">결과</button>
+        <div id="result"></div>
+        <hr>
+</body>
+
+<script>
+    window.onload = function () {
+        var setStr = document.getElementById("js");
+        setStr.value =
+            "Number(document.getElementById('text1').value) + Number(document.getElementById('text2').value)";
+    }
+
+    function test() {
+        var p1 = document.getElementById("result");
+        var str = document.getElementById("js").value;
+        p1.innerHTML = eval(str);
+        //Number(document.getElementById('text1').value) + Number(document.getElementById('text2').value)
+    }
+</script>
+
+</html>

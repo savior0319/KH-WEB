@@ -140,6 +140,21 @@ encodeURIComponent()
 
 decodeURIComponent()
 -> encodeURIComponent()로 인코딩한 문자열을 디코딩
+
+
 ──────────────────────────────────────────────────────────────────────────────────────────
+
+## eval ##
+-> 자바스크립트 코드를 사용가능하게 함
+
+## isFinite(number) ##
+-> number(숫자)가 맞는지는 확인하는 함수(숫자가 맞으면 true)
+-> inNaN의 반대 기능
+-> 단, 아무것도 없을 시에도 true가 나옴
+
+## isNaN(number) ##
+-> number가 NaN인지를 확인 (숫자 아니면 true)
+	- NaN Not a Number의 약자
+-> isFinite의 반대기능
 
 

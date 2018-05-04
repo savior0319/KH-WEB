@@ -8,23 +8,75 @@
     <title>Document</title>
 </head>
 
+<style>
+    hr {
+        width: 65%;
+    }
+
+    #result {
+        width: 200px;
+        height: 200px;
+        border: red solid 3px;
+        margin-top: 15px;
+        overflow: auto;
+    }
+</style>
+
 <body>
-    <input type="text" name="" id="keyword">
-    <button onclick="encode();">전송</button>
+    <center>
+        <h1>내장 함수 (인코딩, 디코딩)</h1>
+        <hr>
+        <br>
+        <input type="text" name="" id="keyword">
+        <br>
+        <br>
+        <button onclick="original();">전송(original)</button>
+        <button onclick="encoding();">전송(encoding)</button>
+        <button onclick="decoding();">전송(decoding)</button>
+        <br>
+        <br>
+        <button onclick="encoding1()">encodeURI</button>
+        <button onclick="encoding2()">encodeURIComponent</button>
+
+        <div id="result"></div>
 </body>
 
 <script>
-    function original() {
+    var str;
 
+    function original() {
+        str = document.getElementById("keyword").value;
+        var result = document.getElementById("result");
+        result.innerHTML += str + "<br>";
     }
 
     function encoding() {
-
+        var result = document.getElementById("result");
+        result.innerHTML += escape(str) + "<br>";
     }
 
     function decoding() {
-
+        unescape(str);
+        var result = document.getElementById("result");
+        result.innerHTML += unescape(str) + "<br>";
     }
+
+    function encoding1() {
+        str = document.getElementById("keyword").value;
+        alert("http://naver.com/search?query=" + encodeURI(str));
+    }
+
+    // function decoding1() {
+    //     alert(str + "->" + decodeURI(str));
+    // }
+
+    function encoding2() {
+        alert(encodeURIComponent("http://naver.com/search?query=안녕하세요"));
+    }
+
+    // function decoding2() {
+    //     alert(str + "->" + decodeURI(str));
+    // }
 </script>
 
 </html>

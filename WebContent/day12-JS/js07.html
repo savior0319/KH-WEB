@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #result {
+        width: 350px;
+        height: 70px;
+        border: maroon solid 5px;
+        margin-top: 15px;
+    }
+</style>
+
+<body>
+    <p>첫 번째 수 :
+        <input type="text" name="" id="text1">
+        <br>
+    </p>
+    <p>
+        두 번째 수 :
+        <input type="text" name="" id="text2">
+        <br>
+    </p>
+    <p>자바스크립트 처리 :
+        <input type="text" name="" id="js" size="50">
+    </p>
+    <button onclick="test();">결과</button>
+
+    <div id="result"></div>
+</body>
+
+<script>
+    function test() {
+        var p1 = document.getElementById("result");
+        var str = document.getElementById("js").value;
+        p1.innerHTML = str;
+    }
+</script>
+
+</html>

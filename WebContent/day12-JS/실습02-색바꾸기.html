@@ -70,7 +70,7 @@
       if (counter == 5) {
         var div5 = document.getElementById("div5");
         div5.innerHTML = "";
-        for (var i = 0; i < 5; i++) {
+        for (let i = 0; i < 5; i++) {
           div5.innerHTML +=
             "<div style = 'border:1px solid black; height:100px; width:100px; background-color:" + colorArr[
               i] + ";' class=divss id=" + colorArr[i] + " onclick=clickDiv(\'" + colorArr[i] + "\')></div>";

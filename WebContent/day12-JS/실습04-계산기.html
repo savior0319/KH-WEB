@@ -120,20 +120,22 @@
 
     function buttonClick(num) {
 
+        var getVal = num.innerHTML;
+
         if (temp == "") {
             printResult.innerHTML = "";
         }
-        if ((num.innerHTML == "+" || num.innerHTML == "-" || num.innerHTML == "." || num.innerHTML == "*" || num.innerHTML ==
-                "/" || num.innerHTML == "%" || num.innerHTML == "=") && temp == "") {
+        if ((getVal == "+" || getVal == "-" || getVal == "." || getVal == "*" || getVal ==
+                "/" || getVal == "%" || getVal == "=") && temp == "") {
             printResult.innerHTML = 0;
         } else {
-            if (num.innerHTML != '=') {
-                temp += num.innerHTML;
-                printResult.innerHTML += num.innerHTML;
-            } else if (num.innerHTML == "=") {
+            if (getVal != '=') {
+                temp += getVal;
+                printResult.innerHTML += getVal;
+            } else if (getVal == "=") {
                 result();
             }
-            if (num.innerHTML == "AC") {
+            if (getVal == "AC") {
                 clear();
             }
         }
@@ -141,7 +143,11 @@
     }
 
     function result() {
-        resultNum = eval(temp);
+        try {
+            resultNum = eval(temp);
+        } catch {
+            clear();
+        }
         console.log(resultNum);
         printResult.innerHTML = resultNum;
         temp = printResult.innerHTML;

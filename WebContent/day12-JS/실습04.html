@@ -114,33 +114,50 @@
 </body>
 
 <script>
-    var result = document.getElementById("result");
+    var resultTemp = "";
 
     function buttonClick(num) {
 
+        var result = document.getElementById("result");
         var getNum = num.innerHTML;
         var resultEmpty = document.getElementById("result").innerHTML;
 
+        if (getNum != "+" && getNum != "=" && getNum != "-" && getNum != "." && getNum != "*" && getNum != "%" &&
+            getNum != "/" && getNum != "(" && getNum != ")") {
+            var getTemp = "Number(" + num.innerHTML + ")";
+            resultTemp += getTemp;
+        }
+
+        if (getNum == "+") {
+            resultTemp += "+";
+        } else if (getNum == "(") {
+            resultTemp += "(";
+        } else if (getNum == ")") {
+            resultTemp += ")";
+        } else if (getNum == "%") {
+            resultTemp += "%";
+        } else if (getNum == "*") {
+            resultTemp += "*";
+        } else if (getNum == "-") {
+            resultTemp += "-";
+        } else if (getNum == ".") {
+            resultTemp += ".";
+        } else if (getNum == "/") {
+            resultTemp += "/";
+        } else if (getNum == "AC") {
+            result.innerHTML = Number(0);
+            resultTemp = "";
+        }
         if (resultEmpty == 0) {
             result.innerHTML = "";
         }
-
-        result.innerHTML += getNum;
-
-
+        if (getNum != "AC") {
+            result.innerHTML += getNum;
+        }
         if (num.innerHTML == "=") {
-            plus(result.innerHTML);
             result.innerHTML = "";
+            result.innerHTML = eval(resultTemp);
         }
-        var getPlus;
-        function plus(value) {
-            getPlus = value.split("=");
-            var resultNum = getPlus.split("+");
-            alert(resultNum);
-
-
-        }
-
     }
 </script>
 

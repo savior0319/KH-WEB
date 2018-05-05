@@ -114,42 +114,43 @@
 </body>
 
 <script>
-    var Temp = "";
-    var resultNum = document.getElementById("result");
-    var endNum = 0;
+    var temp = "";
+    var printResult = document.getElementById("result");
+    var resultNum = 0;
 
     function buttonClick(num) {
 
-        if (Temp == "") {
-            resultNum.innerHTML = "";
+        if (temp == "") {
+            printResult.innerHTML = "";
         }
         if ((num.innerHTML == "+" || num.innerHTML == "-" || num.innerHTML == "." || num.innerHTML == "*" || num.innerHTML ==
-                "/" || num.innerHTML == "%" || num.innerHTML == "=") && Temp == "") {
-            resultNum.innerHTML = 0;
+                "/" || num.innerHTML == "%" || num.innerHTML == "=") && temp == "") {
+            printResult.innerHTML = 0;
         } else {
             if (num.innerHTML != '=') {
-                Temp += num.innerHTML;
-                resultNum.innerHTML += num.innerHTML;
+                temp += num.innerHTML;
+                printResult.innerHTML += num.innerHTML;
             } else if (num.innerHTML == "=") {
-                end();
+                result();
             }
             if (num.innerHTML == "AC") {
                 clear();
             }
         }
-        // console.log(Temp);
+        console.log(temp);
     }
 
-    function end() {
-        endNum = eval(Temp);
-        // console.log(endNum);
-        resultNum.innerHTML = endNum;
+    function result() {
+        resultNum = eval(temp);
+        console.log(resultNum);
+        printResult.innerHTML = resultNum;
+        temp = printResult.innerHTML;
     }
 
     function clear() {
-        resultNum.innerHTML = 0;
-        Temp = "";
-        endNum = 0;
+        printResult.innerHTML = 0;
+        temp = "";
+        resultNum = 0;
     }
 </script>
 

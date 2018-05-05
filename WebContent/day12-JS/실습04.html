@@ -114,50 +114,42 @@
 </body>
 
 <script>
-    var resultTemp = "";
+    var Temp = "";
+    var resultNum = document.getElementById("result");
+    var endNum = 0;
 
     function buttonClick(num) {
 
-        var result = document.getElementById("result");
-        var getNum = num.innerHTML;
-        var resultEmpty = document.getElementById("result").innerHTML;
+        if (Temp == "") {
+            resultNum.innerHTML = "";
+        }
+        if ((num.innerHTML == "+" || num.innerHTML == "-" || num.innerHTML == "." || num.innerHTML == "*" || num.innerHTML ==
+                "/" || num.innerHTML == "%" || num.innerHTML == "=") && Temp == "") {
+            resultNum.innerHTML = 0;
+        } else {
+            if (num.innerHTML != '=') {
+                Temp += num.innerHTML;
+                resultNum.innerHTML += num.innerHTML;
+            } else if (num.innerHTML == "=") {
+                end();
+            }
+            if (num.innerHTML == "AC") {
+                clear();
+            }
+        }
+        // console.log(Temp);
+    }
 
-        if (getNum != "+" && getNum != "=" && getNum != "-" && getNum != "." && getNum != "*" && getNum != "%" &&
-            getNum != "/" && getNum != "(" && getNum != ")") {
-            var getTemp = "Number(" + num.innerHTML + ")";
-            resultTemp += getTemp;
-        }
+    function end() {
+        endNum = eval(Temp);
+        // console.log(endNum);
+        resultNum.innerHTML = endNum;
+    }
 
-        if (getNum == "+") {
-            resultTemp += "+";
-        } else if (getNum == "(") {
-            resultTemp += "(";
-        } else if (getNum == ")") {
-            resultTemp += ")";
-        } else if (getNum == "%") {
-            resultTemp += "%";
-        } else if (getNum == "*") {
-            resultTemp += "*";
-        } else if (getNum == "-") {
-            resultTemp += "-";
-        } else if (getNum == ".") {
-            resultTemp += ".";
-        } else if (getNum == "/") {
-            resultTemp += "/";
-        } else if (getNum == "AC") {
-            result.innerHTML = Number(0);
-            resultTemp = "";
-        }
-        if (resultEmpty == 0) {
-            result.innerHTML = "";
-        }
-        if (getNum != "AC") {
-            result.innerHTML += getNum;
-        }
-        if (num.innerHTML == "=") {
-            result.innerHTML = "";
-            result.innerHTML = eval(resultTemp);
-        }
+    function clear() {
+        resultNum.innerHTML = 0;
+        Temp = "";
+        endNum = 0;
     }
 </script>
 

@@ -39,48 +39,48 @@
   </fieldset>
   <br>
 
-  <script>
-    var getColor = document.getElementsByClassName("divss");
-    var counter = 0;
-    var colorArr = [];
-
-    function clickDiv(color) {
-      if (color == 'red') {
-        red.style = "display : none;"
-        counter++;
-        colorArr.push("red");
-      } else if (color == 'blue') {
-        blue.style = "display : none;"
-        counter++;
-        colorArr.push("blue");
-      } else if (color == 'green') {
-        green.style = "display : none;"
-        counter++;
-        colorArr.push("green");
-      } else if (color == 'pink') {
-        pink.style = "display : none;"
-        counter++;
-        colorArr.push("pink");
-      } else if (color == 'yellow') {
-        yellow.style = "display : none;"
-        counter++;
-        colorArr.push("yellow");
-      }
-
-      if (counter == 5) {
-        var div5 = document.getElementById("div5");
-        div5.innerHTML = "";
-        for (let i = 0; i < 5; i++) {
-          div5.innerHTML +=
-            "<div style = 'border:1px solid black; height:100px; width:100px; background-color:" + colorArr[
-              i] + ";' class=divss id=" + colorArr[i] + " onclick=clickDiv(\'" + colorArr[i] + "\')></div>";
-        }
-        colorArr = [];
-        counter = 0;
-      }
-    }
-  </script>
-
 </body>
+
+<script>
+  var getColor = document.getElementsByClassName("divss");
+  var counter = 0;
+  var colorArr = [];
+
+  function clickDiv(color) {
+    if (color == 'red') {
+      red.style = "display : none;"
+      counter++;
+      colorArr.push("red");
+    } else if (color == 'blue') {
+      blue.style = "display : none;"
+      counter++;
+      colorArr.push("blue");
+    } else if (color == 'green') {
+      green.style = "display : none;"
+      counter++;
+      colorArr.push("green");
+    } else if (color == 'pink') {
+      pink.style = "display : none;"
+      counter++;
+      colorArr.push("pink");
+    } else if (color == 'yellow') {
+      yellow.style = "display : none;"
+      counter++;
+      colorArr.push("yellow");
+    }
+
+    if (counter == 5) {
+      var div5 = document.getElementById("div5");
+      div5.innerHTML = "";
+      for (let i = 0; i < 5; i++) {
+        div5.innerHTML +=
+          "<div style = 'border:1px solid black; height:100px; width:100px; background-color:" + colorArr[
+            i] + ";' class=divss id=" + colorArr[i] + " onclick=clickDiv(\'" + colorArr[i] + "\')></div>";
+      }
+      colorArr = [];
+      counter = 0;
+    }
+  }
+</script>
 
 </html>

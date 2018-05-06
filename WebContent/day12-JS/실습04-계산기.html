@@ -114,9 +114,14 @@
 </body>
 
 <script>
-    var temp = "";
     var printResult = document.getElementById("result");
     var resultNum = 0;
+    var temp = "";
+
+    window.onload = function () {
+        printResult.style.fontSize = "25px";
+        printResult.style.lineHeight = "45px";
+    }
 
     function buttonClick(num) {
 
@@ -139,18 +144,19 @@
                 clear();
             }
         }
-        console.log(temp);
     }
 
     function result() {
         try {
             resultNum = eval(temp);
+            printResult.innerHTML = resultNum;
+            temp = printResult.innerHTML;
         } catch {
-            clear();
+            printResult.innerHTML = "잘못입력했습니다";
+            setTimeout(() => {
+                clear();
+            }, 1000);
         }
-        console.log(resultNum);
-        printResult.innerHTML = resultNum;
-        temp = printResult.innerHTML;
     }
 
     function clear() {

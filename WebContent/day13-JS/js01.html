@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myfunc();">클릭</button>
+</body>
+
+<script>
+    function myfunc() {
+        var object = {
+            a: 100,
+            b: 200,
+            test: function () {
+                alert('Test')
+            }
+        };
+        console.log(object);
+        console.log("a -> " + object.a);
+        console.log("b -> " + object['b']);
+        console.log("function -> " + object.test);
+    }
+</script>
+
+</html>

@@ -21,10 +21,36 @@
                 alert('Test')
             }
         };
+        // 객체 값 출력
         console.log(object);
         console.log("a -> " + object.a);
         console.log("b -> " + object['b']);
         console.log("function -> " + object.test);
+
+        // in 키워드
+        console.log('a' in object);
+
+        // with 키워드
+        with(object) {
+            a = 300;
+            b = 400;
+        }
+        console.log(object);
+
+        // c = 300 추가
+        object.c = 300;
+        console.log(object.c);
+
+        // test 함수 추가
+        object.test2 = function () {
+            alert('test2');
+            // return도 가능
+        }
+        console.log(object.test2);
+
+        // a 삭제
+        delete(object.a);
+        console.log(object);
     }
 </script>
 

@@ -23,12 +23,8 @@
         button {
             width: 90px;
             height: 30px;
-            position: absolute;
-            margin: auto;
-            left: 0%;
-            top: 0%;
-            bottom: 0%;
-            right: 0%;
+            margin: 10px;
+            margin-left: 45%;
         }
     </style>
 
@@ -37,15 +33,27 @@
 <body>
     <p id="p1"></p>
     <button onclick="test();">현재시간</button>
+    <br>
+    <button onclick="test1();">중단</button>
 </body>
 
 <script>
+    var intervalId;
+
     function test() {
         var p1 = document.getElementById("p1");
-        window.setInterval(function () {
+        intervalId = window.setInterval(function () {
             var date = new Date();
-            p1.innerHTML = date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초"
+            if (date.getHours() >= 12 && date.getHours() <= 23) {
+                p1.innerHTML = "오후 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() +
+                    "초"
+            } else p1.innerHTML = "오전 " + date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() +
+                "초"
         }, 1000);
+    }
+
+    function test1() {
+        window.clearInterval(intervalId);
     }
 </script>
 

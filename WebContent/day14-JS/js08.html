@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="get">
+        <fieldset>
+            <legend>입력</legend>
+            <ul>
+                <li>
+                    입력1 :
+                    <input type="text" name="input1" class="input">
+                </li>
+                <li>
+                    입력2 :
+                    <input type="text" name="input2" class="input">
+                </li>
+                <li>
+                    입력3 :
+                    <input type="text" name="input3" class="input">
+                </li>
+            </ul>
+        </fieldset>
+        <button type="submit" onclick="btn();">확인</button>
+    </form>
+
+</body>
+
+<script>
+    function btn(){
+        alert("host : " + location.host + "\n" + "hostname : " + location.hostname + "\n" + "port : " + location.port + "\n" + "pathname : " + location.pathname + "\n" + "search : " + location.search);
+    }
+</script>
+
+</html>

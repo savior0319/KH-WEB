@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #result {
+        border: 5px solid maroon;
+        width: 300px;
+        height: 150px;
+        color: red;
+        font-size: 50px;
+        font-weight: 0;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    #wrapper {
+        width: 500px;
+        height: 500px;
+        position: absolute;
+        margin: auto;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div id="wrapper">
+        WindowInterval함수
+        <p>실행 확인 버튼을 클릭하여 결과를 확인하세요</p>
+        <button onclick="startChk()">실행확인</button>
+        <br>
+        <div id="result"></div>
+        <br>
+        <button onclick="timestop()">중지</button>
+    </div>
+</body>
+
+<script>
+    var setTime = document.getElementById("result");
+    var intervalId;
+    var count = 0;
+    var isStart = false;
+
+
+    function startChk() {
+        if (isStart == false) {
+            time();
+            isStart = true;
+        }
+    }
+
+    function time() {
+        intervalId = window.setInterval(function () {
+            var date = new Date();
+            var sec = date.getMilliseconds();
+
+            setTime.innerHTML = count + " : " + sec;
+            if (sec >= 990) {
+                count++;
+            }
+        }, 10);
+    }
+
+    function timestop() {
+        window.clearInterval(intervalId);
+        isStart = false;
+    }
+</script>
+
+</html>

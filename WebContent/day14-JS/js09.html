@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    #colorBtn {
+        background: red;
+        width: 100px;
+        height: 100px;
+        border: none;
+    }
+
+    p {
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        background: red;
+    }
+
+    button {
+        width: 100px;
+        height: 40px;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    button:hover {
+        background: skyblue;
+    }
+</style>
+
+<body>
+    <button id="colorBtn" onclick="test();"></button>
+    <br>
+    <button onclick="test1();">assign</button>
+    <br>
+    <button onclick="test2();">reload</button>
+    <br>
+    <button onclick="test3();">replace</button>
+</body>
+
+<script>
+    function test1() {
+        location.assign("http://naver.com/");
+    }
+
+    function test2() {
+        location.reload();
+    }
+
+    function test3() {
+        location.replace("http://naver.com/");
+    }
+
+    function test() {
+        document.getElementById("colorBtn").style.background = "blue";
+    }
+</script>
+
+</html>

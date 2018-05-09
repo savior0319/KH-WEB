@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <title>네이버 지도</title>
+    <script type="text/javascript" src="https://openapi.map.naver.com/openapi/v3/maps.js?clientId=jbMlG5nEVXivxenHUmFw"></script>
+</head>
+
+<body>
+    <div id="map" style="width:60%;height:800px;"></div>
+    <button onclick="myFunc1();">내위치</button>
+    <button onclick="reload();">새로고침</button>
+
+
+    <script>
+        window.onload = function () {
+            navigator.geolocation.getCurrentPosition(showlocation);
+        }
+
+        function showlocation(position) {
+            w = position.coords.latitude;
+            s = position.coords.longitude;
+        }
+
+        var HOME_PATH = window.HOME_PATH || '.';
+        var position = new naver.maps.LatLng(37.5536067, 126.96961950000002);
+
+        var map = new naver.maps.Map('map', {
+            center: position,
+            zoom: 11
+        });
+
+        var markerOptions = {
+            position: position.destinationPoint(90, 15),
+            map: map,
+            icon: {
+                url: HOME_PATH + '/img/example/sally.png',
+                size: new naver.maps.Size(100, 100),
+                origin: new naver.maps.Point(0, 0),
+                anchor: new naver.maps.Point(25, 26)
+            }
+        };
+        var marker = new naver.maps.Marker(markerOptions);
+
+        function myFunc1() {
+            var myPosition = new naver.maps.LatLng(w, s);
+            var marker = new naver.maps.Marker({
+                position: new naver.maps.LatLng(w, s),
+                map: map,
+            });
+
+            map.setCenter(myPosition);
+            map.setZoom(11);
+
+            map.panBy(new naver.maps.Point(10, 10));
+        }
+
+        function reload() {
+            location.reload();
+        }
+    </script>
+</body>
+
+
+
+</html>

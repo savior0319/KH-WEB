@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    ul>li {
+        margin-bottom: 10px;
+        list-style: none;
+    }
+
+    button:nth-of-type(1) {
+        margin-left: 100px;
+    }
+
+    button {
+        margin-right: 30px;
+    }
+</style>
+
+<body>
+    <ul>
+        <li>이름 :
+            <input type="text" name="" id="name">
+        </li>
+        <li>나이 :
+            <input type="text" name="" id="age">
+        </li>
+        <li>주소 :
+            <input type="text" name="" id="address">
+        </li>
+    </ul>
+    <button onclick="btn();">추가</button>
+    <button onclick="print();">출력</button>
+</body>
+
+<script>
+    var objectArr = [];
+
+    function btn() {
+        var name = document.getElementById("name").value;
+        var age = document.getElementById("name").value;
+        var address = document.getElementById("address").value;
+        var object = student(name, age, address);
+        objectArr.push(object);
+    }
+
+    function student(name, age, address) {
+        var object = {
+            name: name,
+            age: age,
+            address: address
+        };
+        return object;
+    }
+
+    function print() {
+        console.log(objectArr);
+    }
+</script>
+
+</html>

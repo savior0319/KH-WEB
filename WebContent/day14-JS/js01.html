@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="myfunc()">클릭</button>
+</body>
+
+
+<script>
+    function myfunc() {
+        var object = [];
+        var object1 = {
+            a: 100,
+            b: 200
+        };
+        var object2 = {
+            name: '이름',
+            age: 30
+        };
+        var object3 = {
+            c: 300,
+            addr: '경기도'
+        };
+        object.push(object1);
+        object.push(object2);
+        object.push(object3);
+
+        console.log(object);
+    }
+</script>
+
+</html>

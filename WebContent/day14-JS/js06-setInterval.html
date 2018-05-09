@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        #p1 {
+            border: 5px solid maroon;
+            height: 200px;
+            width: 500px;
+            font-size: 50px;
+            color: red;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 200px;
+            line-height: 190px;
+        }
+
+        button {
+            width: 90px;
+            height: 30px;
+            position: absolute;
+            margin: auto;
+            left: 0%;
+            top: 0%;
+            bottom: 0%;
+            right: 0%;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p id="p1"></p>
+    <button onclick="test();">현재시간</button>
+</body>
+
+<script>
+    function test() {
+        var p1 = document.getElementById("p1");
+        window.setInterval(function () {
+            var date = new Date();
+            p1.innerHTML = date.getHours() + "시 " + date.getMinutes() + "분 " + date.getSeconds() + "초"
+        }, 1000);
+    }
+</script>
+
+</html>

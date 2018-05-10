@@ -15,3 +15,15 @@ document.createTextNode(내용) 텍스트노드 생성
 객체명.appendChild(node) 태그에 자손으로 노드를 추가
 
 ※ 즉, 자바스크립트를 가지고 태그와 내용을 생성 할 수 있다는 것을 의미함
+
+ex)
+
+<script>
+    function myfunc() {
+        var test = document.getElementById("test");
+        var h1Tag = document.createElement('h1');
+        var tNode = document.createTextNode("aaaaaa");
+        h1Tag.appendChild(tNode);
+        test.appendChild(h1Tag);
+    }
+</script>

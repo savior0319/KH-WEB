@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test2</title>
+</head>
+
+<body>
+
+    문제1. 동작1 버튼을 클릭하면 아래 div태그 안에 요소노드가 h1이면서
+    <br> textnode가 성공!인 글자를 출력하도록 하시오.
+    <div id="div1" style="border:1px solid black; height:300px; width:400px;"></div>
+    <button onclick="myfunc1();">동작 1 </button>
+    <br>
+    <br> 문제2. 동작2 버튼을 클릭하면 아래 div안에 3행 4열을 가진
+    <br> 테이블이 추가 될 수 있도록 만드시오. (내용 : 홍길동, 20, 경기도, 운동 김말똥, 30, 서울시, 노래 고길똥, 40, 강원도, 댄스)
+    <br>
+
+    <div id="div2" style="border:1px solid black; height:300px; width:400px;">
+    </div>
+    <button onclick="myfunc2();">동작 2 </button>
+    <br>
+</body>
+
+<script>
+    var isClick1 = false;
+    var isClick2 = false;
+
+    function myfunc1() {
+        if (isClick1 == false) {
+            h1();
+            isClick1 = true;
+        }
+    }
+
+    function myfunc2() {
+        if (isClick2 == false) {
+            table();
+            isClick2 = true;
+        }
+    }
+
+    function h1() {
+        var test = document.getElementById("div1");
+        var tag = document.createElement('h1'); // h1태그를 생성
+        var text = document.createTextNode('성공!'); // text를 생성
+        tag.appendChild(text);
+        test.appendChild(tag);
+    }
+
+    function table() {
+        var div2 = document.getElementById("div2");
+        var table = document.createElement("table");
+        var arr = [
+            ["홍길동", 20, "경기도", "운동"],
+            ["김말똥", 30, "서울시", "노래"],
+            ["고길똥", 40, "강원도", "댄스"]
+        ];
+        for (var i = 0; i < arr.length; i++) { // 3
+            var tr = document.createElement("tr");
+            for (var j = 0; j < arr[i].length; j++) { // 4
+                var td = document.createElement("td");
+                var text = document.createTextNode(arr[i][j]);
+                td.appendChild(text);
+                tr.appendChild(td);
+            }
+            table.appendChild(tr);
+        }
+        div2.appendChild(table);
+        console.log(div2);
+        table.border = "1px";
+    }
+</script>
+
+
+</html>

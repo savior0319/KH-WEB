@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    button {
+        width: 100px;
+        height: 100px;
+        border: none;
+        font-weight: 600;
+    }
+</style>
+
+<body>
+    <button id="btn">O</button>
+</body>
+
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('btn');
+        // btn.addEventListener('click', function () {
+        //     alert('클릭');
+        // });
+
+        var mouseEnter = function () {
+            btn.style.fontSize = "50px";
+            btn.style.color = "red";
+            btn.style.background = "skyblue";
+            btn.removeEventListener('mouseenter', mouseEnter); // 이벤트 삭제
+        };
+
+
+        btn.addEventListener('mouseenter', mouseEnter); // 이벤트 생성, mouseEnter-이벤트 추가
+        btn.addEventListener('mouseout', function () {
+            btn.style.fontSize = "13px";
+        });
+    }
+</script>
+
+</html>

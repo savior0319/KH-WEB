@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 400px;
+        margin-top: 100px;
+    }
+
+    * {
+        font-family: "맑은고딕";
+    }
+
+    .btn {
+        margin-top: 15px;
+    }
+</style>
+
+<body>
+    <center>
+        <div>
+            <form action="#" method="get">
+                <fieldset>
+                    <legend>회원가입</legend>
+                    <pre>
+
+ID:       <input type="text" name="id" id="id" placeholder="아이디">
+            
+PW:      <input type="password" name="pw" id="pw" placeholder="비밀번호">
+
+PW(re):  <input type="password" name="pwre" id="pwre" placeholder="비밀번호 확인">
+
+NAME:  <input type="text" name="name" id="name" placeholder="이름">
+   
+
+                </pre>
+                </fieldset>
+                <input type="submit" value="회원가입" class="btn" onclick="return join();">
+                <input type="reset" value="취소" class="btn" onclick="cancel();">
+            </form>
+        </div>
+
+    </center>
+</body>
+
+<script>
+    var getPwre1 = document.getElementById("pwre");
+    var getPw1 = document.getElementById("pw");
+
+    function join() {
+        var getId = document.getElementById("id").value;
+        var getPw = document.getElementById("pw").value;
+        var getPwre = document.getElementById("pwre").value;
+        var getName = document.getElementById("name").value;
+
+        if (getId == "" || getPw == "" || getPwre == "" || getName == "") {
+            alert('입력하지 않은 항목이 있습니다');
+            return false;
+        } else if (getPw != getPwre) {
+            getPwre1.style.background = "red";
+            getPw1.style.background = "red";
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    function cancel() {
+        getPwre1.style.background = "white";
+        getPw1.style.background = "white";
+    }
+</script>
+
+</html>

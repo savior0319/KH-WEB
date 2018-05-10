@@ -31,7 +31,8 @@
         // var regExp = /[ab]/; // 입력 값에 a또는 b가 포함 되어야 함
         // var regExp = /^[ab]/; // 입력 값이 a또는 b로 시작해야 함
         // var regExp = /a$/; // 마지막 글자가 a로 끝나야 함
-        var regExp = /^a.*b$/; // 시작은 a 마지막은 b로 끝나야함
+        // var regExp = /^a.+b$/; // 시작은 a 마지막은 b로 끝나야함 1글자이상
+        var regExp = /^a.*b$/; // 시작은 a 마지막은 b로 끝나야함 0글자이상
 
         var result = regExp.test(getText);
 

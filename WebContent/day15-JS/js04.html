@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        font-family: "맑은고딕";
+    }
+</style>
+
+<body>
+    <pre>
+    <span id="span1">내용1</span>
+    <button onclick="eliminate('span1', this);">삭제1</button>
+
+    <span id="span2">내용2</span>
+    <button onclick="eliminate('span2', this);">삭제2</button>
+
+    <span id="span3">내용3</span>
+    <button onclick="eliminate('span3', this);">삭제3</button>
+
+    <span id="span4">내용4</span>
+    <button onclick="eliminate('span4', this);">삭제4</button>
+    
+    <span id="span5">내용5</span>
+    <button onclick="eliminate('span5', this);">삭제5</button>
+    </pre>
+</body>
+
+<script>
+    function eliminate(id, element) {
+        document.getElementById(id).remove();
+        element.remove();
+    }
+</script>
+
+</html>

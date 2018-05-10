@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<style>
+    button {
+        width: 100px;
+        height: 100px;
+        border: none;
+        font-weight: 600;
+    }
+
+    #btn:hover {
+        background: skyblue;
+    }
+</style>
+
+<body>
+    <button id="btn">클릭</button>
+    <button id="btn1">클릭</button>
+</body>
+
+<script>
+    window.onload = function () {
+        var btn = document.getElementById('btn');
+        var btn1 = document.getElementById('btn1');
+
+        btn.onclick = function () {
+            alert('클릭');
+            btn.onclick = null; // 이벤트 한번 실행 후 삭제
+        }
+
+        btn1.onclick = function () {
+            alert('클릭');
+            btn.onclick = null; // 이벤트 한번 실행 후 삭제
+        }
+    }
+</script>
+
+</html>

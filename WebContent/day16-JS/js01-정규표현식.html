@@ -44,6 +44,8 @@
         // var regExp = /^Hello ?World$/i; // Hello World | HelloWorld 둘다 가능 + 대소문자 구별 안함
         // var regExp = /^Hello(  )?world$/i; // Hello World | Hello  World(띄어쓰기 두번) 가능 + 대소문자 구별 안함 () -> 그룹화 
 
+        var regExp = /^[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+
         var result = regExp.test(getText);
 
         if (result == true) {

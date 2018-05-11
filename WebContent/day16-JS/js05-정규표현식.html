@@ -12,13 +12,13 @@
     #result {
         border: 2px red solid;
         width: 300px;
-        height: 110px;
+        height: 180px;
         margin-top: 10px;
     }
 </style>
 
 <body>
-    <div id="data">Hello, World, JavaScript, ho</div>
+    <div id="data"><p>Hello</p><p>World</p></div>
     <button onclick="check();">exec</button>
     <h3>결과</h3>
     <div id="result"></div>
@@ -36,14 +36,13 @@
 
     function chk() {
         var data = document.getElementById("data").innerHTML;
-        var regExp = /(.+?),(.+?),(.+?),(.+?)$/i;
+        var regExp = /^<p>(.+?)<\/p><p>(.+?)<\/p>$/;
         var eResult = regExp.exec(data);
+        console.log(eResult);
 
         document.getElementById("result").innerHTML += "전체 -> " + eResult[0] + "<br>";
         document.getElementById("result").innerHTML += "1번째 -> " + eResult[1] + "<br>";
         document.getElementById("result").innerHTML += "2번째 -> " + eResult[2] + "<br>";
-        document.getElementById("result").innerHTML += "3번째 -> " + eResult[3] + "<br>";
-        document.getElementById("result").innerHTML += "4번째 -> " + eResult[4] + "<br>";
     }
 </script>
 

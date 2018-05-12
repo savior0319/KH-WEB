@@ -4,12 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 </head>
 
 <body>
-
-
     <style>
         fieldset {
             height: 400px;
@@ -55,6 +52,135 @@ PHONE :     <input type="text" id="tel1" size="2" maxlength="3" />-<input type="
 </body>
 
 <script>
+    function check() {
+        /* start regex chk */
+
+        //result 
+        var getPrint = document.getElementById('message');
+
+        //id 
+        var getId = document.getElementById('user_id');
+        var regExId = /^[a-z][a-z0-9]{3,11}$/;
+        var resultId = regExId.test(getId.value);
+
+        //pw
+        var getPw = document.getElementById('pw');
+        var regExPw = /^[a-zA-Z0-9]{8,12}$/;
+        var resultPw = regExPw.test(getPw.value);
+
+        //pwre
+        var getPwRe = document.getElementById('pw_re');
+
+        //name
+        var getName = document.getElementById('user_name');
+        var regExName = /^[가-힣]+$/;
+        var resultName = regExName.test(getName.value);
+
+        //address
+        var getAddress = document.getElementById('addr');
+        var regExAddress = /^[^a-b]+$/i;
+        var resultAddress = regExAddress.test(getAddress.value);
+
+        var getpost1 = document.getElementById('post_1');
+        var getpost2 = document.getElementById('post_2');
+        var regExPost = /^[0-9]+$/;
+        var resultPost1 = regExPost.test(getpost1.value);
+        var resultPost2 = regExPost.test(getpost2.value);
+
+        //email
+        var getEmail = document.getElementById('email');
+        var regExEmail = /^[a-z0-9-_]{4,12}@[a-z]+\.[a-z]{2,3}$/;
+        var resultEmail = regExEmail.test(getEmail.value);
+
+        //phone
+        var getPhone1 = document.getElementById('tel1');
+        var getPhone2 = document.getElementById('tel2');
+        var getPhone3 = document.getElementById('tel3');
+        var regExPhone1 = /010/;
+        var regExPhone2 = /^[0-9]{3,4}$/;
+        var regExPhone3 = /^[0-9]{4}$/;
+        var resultPhone1 = regExPhone1.test(getPhone1.value);
+        var resultPhone2 = regExPhone2.test(getPhone2.value);
+        var resultPhone3 = regExPhone3.test(getPhone3.value);
+
+        /* end regex chk */
+
+        /* start btn */
+
+        if (resultId == false) {
+            getPrint.innerHTML = '아이디는 소문자로 시작, 4~12자리의 소문자+숫자로 입력하세요';
+            getId.style.background = 'red';
+            return false;
+        } else if (resultPw == false) {
+            getPrint.innerHTML = '비밀번호는 소문자, 대문자, 숫자만 입력해주세요';
+            white();
+            getPw.style.background = 'red';
+            return false;
+        } else if (getPw.value != getPwRe.value) {
+            getPrint.innerHTML = '비밀번호 확인이 일치하지 않습니다';
+            getPwRe.style.background = 'red';
+            return false;
+        } else if (resultName == false) {
+            getPrint.innerHTML = '이름은 한 글자 이상의 한글만 가능합니다';
+            white();
+            getName.style.background = 'red';
+            return false;
+        } else if (resultAddress == false) {
+            getPrint.innerHTML = '주소는 한글로 입력해주세요(영어 사용불가)';
+            white();
+            getAddress.style.background = 'red';
+            return false;
+        } else if (resultPost1 == false || resultPost2 == false) {
+            getPrint.innerHTML = '우편번호는 숫자만 입력해주세요';
+            white();
+            getpost1.style.background = 'red';
+            getpost2.style.background = 'red';
+            return false;
+
+        } else if (resultEmail == false) {
+            getPrint.innerHTML = '이메일을 확인해주세요';
+            white();
+            getEmail.style.background = 'red';
+            return false;
+
+        } else if (resultPhone1 == false || resultPhone2 == false || resultPhone3 == false) {
+            getPrint.innerHTML = '전화번호를 확인해주세요';
+            white();
+            getPhone1.style.background = 'red';
+            getPhone2.style.background = 'red';
+            getPhone3.style.background = 'red';
+            return false;
+        } else {
+            white();
+            return true;
+        }
+
+        /* end btn */
+
+        /* start fill white form */
+
+        function white() {
+            getId.style.background = 'white';
+            getPw.style.background = 'white';
+            getPwRe.style.background = 'white';
+            getName.style.background = 'white';
+            getAddress.style.background = 'white';
+            getpost1.style.background = 'white';
+            getpost2.style.background = 'white';
+            getEmail.style.background = 'white';
+            getPhone1.style.background = 'white';
+            getPhone2.style.background = 'white';
+            getPhone3.style.background = 'white';
+        }
+
+        /* end fill white form */
+    }
+</script>
+
+</html>
+
+<!-- 
+    <script>
     window.onload = function () {
         message = document.getElementById("message");
         user_id = document.getElementById("user_id");
@@ -129,5 +255,4 @@ PHONE :     <input type="text" id="tel1" size="2" maxlength="3" />-<input type="
         tel3.style.backgroundColor = "white";
     }
 </script>
-
-</html>
+ -->

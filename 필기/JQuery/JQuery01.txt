@@ -28,16 +28,18 @@
 ───────────────────────────────────────────────────────────────────────────────────
 
 ## CDN 방식 ##
-1. http://code.jquery.com 이동
-2. <script
-  src="https://code.jquery.com/jquery-3.3.1.js"
-  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-  crossorigin="anonymous"></script>
+
+  구글
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  마이크로소프트
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
 
   ## 다운로드 방식 ##
-  1. http://code.jquery.com 이동
-  2. 다운로드 받음
-  3. <script src="jquery-3.3.1.min.js">
+
+    1. http://code.jquery.com 이동
+    2. 다운로드
+    3. <script src="jquery-3.3.1.min.js"> jquery.js 파일 추가
 
   ───────────────────────────────────────────────────────────────────────────────────
 
@@ -54,3 +56,5 @@
 
   ex) $('#p1').css('color', 'red');
   -> ID가 p1인 태그(요소)의 글자 색상(color)을 빨간색(red)로 설정하여라
+
+  ───────────────────────────────────────────────────────────────────────────────────

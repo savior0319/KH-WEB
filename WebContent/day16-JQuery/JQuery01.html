@@ -18,13 +18,17 @@
 
 <script>
     // JQuery
-    // $(document).ready(function () {
-    //     $('#p1').css('color', 'red');
-    //     $('#p2').css('background', 'skyblue');
-    //     $('#btn').click(function () {
-    //         $('#p1').css('color', 'black');
-    //     })
-    // });
+    $(document).ready(function () {
+        var p1 = $('#p1');
+        var p2 = $('#p2');
+        var btn = $('#btn');
+
+        p1.css('color', 'red');
+        p2.css('background', 'skyblue');
+        btn.click(function () {
+          p1.css('color', 'black');
+        })
+    });
 
     // JS
     // document.getElementById('p1').style.color = 'red';

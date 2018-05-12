@@ -13,17 +13,26 @@
 <body>
     <p id="p1">test1</p>
     <p id="p2">test2</p>
-    <button id="btn-1">1</button>
+    <button id="btn" onclick="btn();">1</button>
 </body>
 
 <script>
-    $(document).ready(function () {
-        $('#p1').css('color', 'red');
-        $('#p2').css('background', 'skyblue');
-        $('#btn-1').click(function () {
-            $('#p1').css('color', 'black');
-        })
-    });
+    // JQuery
+    // $(document).ready(function () {
+    //     $('#p1').css('color', 'red');
+    //     $('#p2').css('background', 'skyblue');
+    //     $('#btn').click(function () {
+    //         $('#p1').css('color', 'black');
+    //     })
+    // });
+
+    // JS
+    // document.getElementById('p1').style.color = 'red';
+    // document.getElementById('p2').style.background = 'skyblue';
+
+    // function btn() {
+    //     document.getElementById('p1').style.color = 'black';
+    // }
 </script>
 
 </html>

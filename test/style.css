@@ -1,0 +1,104 @@
+/* 초기화 */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+/* 메뉴바 a태그  */
+
+.menu-link {
+    color: white;
+    text-decoration: none;
+}
+
+/* 메뉴바 */
+
+#menu-bar {
+    list-style: none;
+    width: 80%
+}
+
+/* 메뉴바 - 리스트 */
+
+#menu-bar>li {
+    float: left;
+    width: 20%;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    background: rgb(8, 143, 132);
+    color: white;
+}
+
+/* 서브 메뉴 */
+
+#sub-1 {
+    list-style: none;
+    opacity: 0;
+    display: none;
+}
+
+/* hover */
+
+#menu-bar>li:hover {
+    background: rgb(7, 182, 167);
+    cursor: pointer;
+}
+
+.menu-1:hover #sub-1 {
+    background: skyblue;
+    opacity: 1;
+    background: rgb(104, 104, 104);
+    display: block;
+}
+
+#sub-1>li:hover {
+    background: rgb(139, 139, 139);
+}
+
+#search {
+    width: 20%;
+    float: left;
+    line-height: 30px;
+    height: 30px;
+    text-align: center;
+    background: rgb(8, 143, 132);
+    color: white;
+}
+
+#search-form>input:nth-of-type(1) {
+    font-family: '맑은고딕';
+    font-size: 16.5px;
+    margin-left: 20px;
+    margin-top: 1.5px;
+}
+
+#search-form>button {
+    font-family: '맑은고딕';
+    font-size: 16.5px;
+    margin-top: 1.5px;
+    border: none;
+    background: rgb(8, 143, 132);
+    color: white;
+    cursor: pointer;
+}
+
+#search{
+    text-align: left;
+}
+
+#search-form {
+    display: inline;
+}
+
+@media screen and (max-width: 1442px) {
+
+    #search-form, #search{
+        display: none;
+    }
+    #menu-bar {
+        width: 100%;
+    }
+}

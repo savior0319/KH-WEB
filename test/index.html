@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!-- 드롭다운 메뉴바 -->
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<script src="/WebContent/JS/jquery-3.3.1.min.js">
+</script>
+
+<script>
+    window.onload = function () {
+        // alert(screen.availWidth);
+    }
+</script>
+
+<body>
+    <nav>
+        <ul id="menu-bar">
+
+            <li class="menu-1">
+                <a href="#" class="menu-link">메뉴1</a>
+                <ul id="sub-1">
+                    <li>
+                        <a href="http://naver.com" class="menu-link">네이버</a>
+                    </li>
+                    <li>
+                        <a href="http://daum.net" class="menu-link">다음</a>
+                    </li>
+                    <li>
+                        <a href="https://google.com" class="menu-link">구글</a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu-1">
+                <a href="#" class="menu-link">메뉴2</a>
+            </li>
+
+            <li class="menu-1">
+                <a href="#" class="menu-link">메뉴3</a>
+            </li>
+
+            <li class="menu-1">
+                <a href="#" class="menu-link">메뉴4</a>
+            </li>
+
+            <li class="menu-1">
+                <a href="#" class="menu-link">메뉴5</a>
+            </li>
+        </ul>
+
+        <div id="search">
+            <div id="search-form">
+                <input type="text" placeholder="Search" id="searchValue">
+                <button type="submit" onclick="search();">검색</button>
+            </div>
+        </div>
+    </nav>
+</body>
+
+<script>
+    var svKey = document.getElementById('searchValue');
+
+    function search() {
+        var sv = document.getElementById('searchValue').value;
+        location.assign('https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=0&ie=utf8&query=' + sv);
+        svKey.value = "";
+    }
+
+
+    svKey.addEventListener('keypress', function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13) {
+            search();
+        }
+    });
+</script>
+
+</html>

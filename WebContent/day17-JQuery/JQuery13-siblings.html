@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .siblings * {
+        display: block;
+        border: 2px solid gray;
+        color: blue;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    div {
+        width: 500px;
+    }
+</style>
+
+<body>
+    <div class="siblings">
+        <div>
+            div(parent)
+            <p>i'm p</p>
+            <span>i'm span</span>
+            <h2>i'm h2</h2>
+            <h3>i'm h3</h3>
+            <h4>i'm h4</h4>
+            <h5>i'm h5</h5>
+            <h6>i'm h6</h6>
+            <p>i'm p</p>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        // var $select = $('h2').siblings(); // 자신을 제외 한 모든 형제
+        var $select = $('h2').siblings('p'); 
+        $select.css('border', '2px solid red');
+
+    });
+</script>
+
+</html>

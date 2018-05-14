@@ -44,7 +44,8 @@
 <script>
     $(document).ready(function () {
         // var $div = $('div').children('.child1');
-        var $div = $('div').children('.child1'); // child1만 선택
+        // var $div = $('div').children('.child1'); // child1만 선택
+        var $div = $('div').find('span'); // 후손들 중 span 태그를 선택
         $div.css('border', '2px solid red'); // 직계 자손 선택
     });
 </script>

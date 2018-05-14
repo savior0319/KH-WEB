@@ -215,7 +215,7 @@ ex)
 
 ## parentsUntil([인자]) ##
 -> 선택된 요소로부터 인자요소까지 범위의 요소 리턴
-    (선택된 요소는 제외 함)
+    (선택된 요소는 0h제외 함)
 
 ex)
     var $span = $('span').parentsUntil('div'); // 부모 중 'div' 태그 전까지 선택
@@ -233,6 +233,17 @@ ex)
      var $div = $('div').children('.child1'); // child1만 선택
      });
 
+## find(인자) ##
+-> 선택된 요소의 인자와 일치하는 모든 후손 (모든 레벨) 객체 리턴
 
+ex)
+    var $div = $('div').find('span'); // 후손들 중 span 태그를 선택
 
+## siblings([인자]) ##
+-> 같은 레벨에 있는 요소(형제)를 선택 할 수 있는 메소드
+-> 같은 레벨에 있는 요소(형제)중 인자와 일치하는 요소 리턴
+
+ex)
+    var $select = $('h2').siblings(); // 자신을 제외 한 모든 형제
+    var $select = $('h2').siblings('p'); 
 

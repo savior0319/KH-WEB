@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .descendants * {
+        display: block;
+        border: 2px solid gray;
+        color: blue;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    div {
+        width: 500px;
+    }
+</style>
+
+<body>
+    <h3>div(current element)</h3>
+    <div class="descendants">
+        <p class="child1">
+            p(child)
+            <span class="child1">
+                span(grandchild)
+            </span>
+        </p>
+        <p class="child2">
+            p(child)
+            <span>
+                span(grandchild)
+            </span>
+        </p>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        // var $div = $('div').children('.child1');
+        var $div = $('div').children('.child1'); // child1만 선택
+        $div.css('border', '2px solid red'); // 직계 자손 선택
+    });
+</script>
+
+</html>

@@ -153,7 +153,7 @@ nav {
     display: inline;
 }
 
-/* @media screen and (max-width: 1442px) {
+@media screen and (max-width: 1442px) {
 
     #search-form, #search{
         display: none;
@@ -161,4 +161,4 @@ nav {
     #menu-bar {
         width: 100%;
     }
-} */
+}

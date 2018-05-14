@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .ancestors * {
+        display: block;
+        border: 2px solid gray;
+        color: blue;
+        padding: 5px;
+        margin: 15px;
+    }
+
+    div {
+        width: 500px;
+    }
+</style>
+
+<body>
+    <div class="ancestors">
+        <div>I'm div (great-grandparent)
+            <ul>
+                I'm ul(grandparent)
+                <li>i'm li (direct parent)
+                    <br>
+                    <span>span</span>
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            div (grandparent)
+            <p>p(directparent)
+                <span>span</span>
+            </p>
+        </div>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        // var $span = $('span').parent();
+        // var $span = $('span').parents('ul');
+        var $span = $('span').parentsUntil('div');
+        $span.css('border', '2px solid red');
+    });
+</script>
+
+</html>

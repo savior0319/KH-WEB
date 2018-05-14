@@ -27,7 +27,7 @@
             <td>20</td>
         </tr>
         <tr>
-            <td>가</td>
+            <td>합계</td>
             <td>30</td>
             <td>30</td>
         </tr>
@@ -47,21 +47,25 @@
     }
 
     function click1() {
+        clearTable();
         $('tr:nth-of-type(2)>td:nth-of-type(2), tr:nth-of-type(2)>td:nth-of-type(3)').css('color', 'red').css(
             'background', 'darkgray');
     }
 
     function click2() {
+        clearTable();
         $('tr:nth-of-type(3)>td:nth-of-type(2), tr:nth-of-type(3)>td:nth-of-type(3)').css('color', 'red').css(
             'background', 'darkgray');
     }
 
     function click3() {
+        clearTable();
         $('tr:nth-of-type(2)>td:nth-of-type(2), tr:nth-of-type(3)>td:nth-of-type(2)').css('color', 'red').css(
             'background', 'darkgray');
     }
 
     function click4() {
+        clearTable();
         $('tr:nth-of-type(3)>td:nth-of-type(3), tr:nth-of-type(2)>td:nth-of-type(3)').css('color', 'red').css(
             'background', 'darkgray');
     }

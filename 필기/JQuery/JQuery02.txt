@@ -115,7 +115,7 @@ ex)
 
 요소:contains(문자열)   특정 문자열을 포함하는 객체 선택
 요소:eq(n)              N번째에 위치하는 객체 선택
-요소gt(n)               N번쨰를 초과하는 객체 선택
+요소gt(n)               N번째를 초과하는 객체 선택
 요소:has(h1)            H1태그를 가지고 있는 객체 선택
 요소:lt(n)              N번째 미만에 위하는 객체 선택
 요소:not(선택자)        선택자와 일치하지 않는 객체(부정)
@@ -125,5 +125,114 @@ ex)
 Jquery의 표준을 따라서 1번째 부터 시작 함
 
 ──────────────────────────────────────────────────────────────────────────────────────────────
+
+@ JQuery Traversing
+-> JQuery Traversing은 Jquery의 탐색(순회)이라는 뜻
+-> 특정 요소를 찾거나 필터링 하는 작업은 대부분 선택자(selector)를 사용 하면 됨
+-> 1차적으로 선택자에 의해 찾은 요소들을 다시 2차 필터링 하거나 새로운 요소를
+추가 할 때는 traverse 관련 메소드를 사용 하면 됨
+
+※ 처음 필터 처리한 요소들의집합에서 다시 특정 요소를 찾거나 또는 필터링과 같이 추가하는
+동작이라고 보면 됨
+
+@ filtering 메소드
+-> 선택자로 지정한 객체를 기준으로 객체 그룹에서 위치를 기준으로 객체 선택을 하는 메소드
+
+
+    <p class="a">내용1</p>
+    <p class="b">내용2</p>
+    <p class="c">내용3</p>
+    <p class="b">내용4</p>
+    <p class="e">내용5</p>
+
+## first() ##
+-> 선택된 요소 중 가장 첫번째 요소를 리턴
+
+ex)
+    $('.a').first().css('color', 'red').css('background', 'skyblue');
+
+## last() ##
+-> 선택된 요소 중 가장 마지막 요소를 리턴
+
+ex)
+    $('.b').last().css('color', 'red').css('background', 'skyblue');
+
+## eq() ##
+-> 인텍스 번호와 일치하는 요소 리턴 (0부터 시작)
+
+ex)
+    $('p').eq(2).css('color', 'red');
+
+## filter() ##
+-> 인자값과 일치하는 요소만 리턴
+-> 2가지 형태로 사용
+    - $('selector').filter(selector);
+    - $('selector').filter(function(){});
+
+ex)
+    $(document).ready(function () {
+        var $select = $('p').filter(
+            function (index) {
+                if (index == 0) return false;
+                return index % 2 == 0;
+            }
+        );
+        $select.css('color', 'red');
+    });
+
+
+## not() ##
+-> 인자값과 일치하니 않는 요소만 리턴
+
+ex)
+    $(document).ready(function () {
+        var $select = $('p').not('.p');
+        $select.css('background', 'hotpink');
+
+    });
+
+──────────────────────────────────────────────────────────────────────────────────────────────
+
+@ Ancestors 메소드
+-> 선택된 요소의 상위 요소들을 선택 할 수 있는 메소드
+
+## parent() ##
+-> 선택된 요소의 바로 위(상위요소)만 리턴
+
+ex)
+    $(document).ready(function () {
+        var $span = $('span').parent();
+        $span.css('border', '2px solid red');
+    });
+
+## parents([인자]) ##
+-> 선택된 요소의 모든 상위 요소 리턴
+-> 매개변수가 있으면 매개변수와 일치하는 부모만 리턴
+
+ex)
+     var $span = $('span').parents('ul'); // 부모 중 'ul' 태그만 선택
+     $span.css('border', '2px solid red');
+
+## parentsUntil([인자]) ##
+-> 선택된 요소로부터 인자요소까지 범위의 요소 리턴
+    (선택된 요소는 제외 함)
+
+ex)
+    var $span = $('span').parentsUntil('div'); // 부모 중 'div' 태그 전까지 선택
+    $span.css('border', '2px solid red');
+
+## children([인자]) ##
+-> 선택된 요소의 모든 자손(다음레벨) 객체를 리턴
+-> 선택된 요소의 인자와 일치하는 자손(다음레벨) 객체 리턴
+
+ex)
+     $(document).ready(function () {
+      var $div = $('div').children();
+     $div.css('border', '2px solid red'); // 직계 자손 선택
+      //or
+     var $div = $('div').children('.child1'); // child1만 선택
+     });
+
+
 
 

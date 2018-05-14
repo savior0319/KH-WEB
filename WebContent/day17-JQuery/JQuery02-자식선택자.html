@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <title>Jquery Selector</title>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <h1>Apple</h1>
+        </li>
+        <li>
+            Bag
+        </li>
+        <li>
+            Cat
+        </li>
+        <li>
+            Dog
+        </li>
+        <li>
+            Water
+        </li>
+    </ul>
+    <h1>Child H1</h1>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('li>h1').css('background', 'hotpink');
+        $('ul>li').css('color', 'blue');
+        $('body>h1').css('color', 'red');
+    });
+</script>
+
+</html>

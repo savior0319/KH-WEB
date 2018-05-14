@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+
+<style>
+    * {
+        font-family: '맑은고딕';
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <pre>
+    <input type="button" value="버튼">
+
+    <select>
+        <option>Apple</option>
+        <option>Banana</option>
+        <option>Cat</option>
+        <option>Duck</option>
+        <option>Elephant</option>
+    </select>
+
+    </pre>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('input:button').css('color', 'red');
+        $('input:button').click(function () {
+            // setTimeout(function () {
+            var value = $('select>option:selected').val();
+            alert(value);
+            $('select>option:selected').remove();
+            // }, 3000);
+        });
+    });
+</script>
+
+</html>

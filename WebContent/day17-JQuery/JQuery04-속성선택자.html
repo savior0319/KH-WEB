@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <pre>
+<input type="text" value="사과" name="first">
+
+<input type="text" value="배" name="second">
+
+<input type="text" value="포도" name="third">
+    
+<input type="text" value="바나나" name="fourth">
+    </pre>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('input[type=text]').css('color', 'red');
+        $('input[name^=fi]').css('background', 'darkgray');
+        $('input[name$=th]').css('color', 'blue');
+    });
+</script>
+
+</html>

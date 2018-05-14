@@ -9,12 +9,6 @@
     <title>Document</title>
 </head>
 
-<style>
-    * {
-        font-size: 20px;
-    }
-</style>
-
 <body>
     <table>
         <tr>
@@ -57,11 +51,13 @@
 
 <script>
     $(document).ready(function () {
-        $('table').attr('border', '5px');
-        $('tr:eq(0)').css('color', 'blue');
-        $('tr:gt(1)').css('background', 'yellow');
+        $('table').attr('border', '1px').css('text-align', 'center').css('font-size', '20px');
+        $('tr:eq(0)').css('color', 'white').css('background', 'black');
+        $('td:nth-child(3n+2)').css('background', 'yellow');
+        $('td:nth-child(3n+1)').css('background', 'darkgray');
+
+        // $('tr:gt(1)').css('background', 'yellow');
         // $('tr:nth-of-type(2n+1)').css('color', 'maroon');
-        $('tr:nth-child(2n+1)').css('color', 'green');
     });
 </script>
 

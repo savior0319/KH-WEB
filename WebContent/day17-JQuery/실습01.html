@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>text1</h1>
+    <h1 id="text">text2</h1>
+    <h1 name="text">text3</h1>
+    <h1 class="text">text4</h1>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('h1:nth-of-type(1)').css('color', 'red');
+        $('#text').css('color', 'orange');
+        $('h1[name=text]').css('color', 'yellow');
+        $('.text').css('color', 'green');
+    });
+</script>
+
+</html>

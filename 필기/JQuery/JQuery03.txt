@@ -1,0 +1,36 @@
+## next() ##
+-> 선택된 요소의 같은 레벨(형제)들 중 선택된 요소 다음의 한개 요소를 리턴
+
+ex)
+    $('h2').next().css('border', '2px solid red'); // h2 태그 다음에 오는 요소 선택
+    $('h2').nextAll().css('border', '2px solid red'); // h2 태그 다음에 오는 모든 요소 선택
+
+## nextUtill(인자) ##
+-> 선택된 요소부터 같은 레벨(형제)들 중 인자까지 범위의 모든 요소를 리턴
+
+ex)
+   $('h2').nextUntil('h5').css('border', '2px solid red'); // h2 부터 h5 태그 전까지 선택
+
+## prev() ##
+-> 선택된 요소의 같은 레벨(형제)들 중 선택된 요소 이전의 한 개 요소 리턴
+
+ex)
+    $('h2').prev().css('border', '2px solid red'); // h2 태그의 이전 요소 선택
+
+## prevAll() ##
+-> 선택된 요소와 같은 레벨(형제)들 중 선택된 요소 이전의 모든 요소 리턴
+
+ex)
+    $('h2').prevAll().css('border', '2px solid red'); // h2 태그의 이전 모든 요소 선택
+
+## prevUntil(인자) ##
+-> 선택된 요소의 같은 레벨(형제)들 중 선택된 요소 이전의 요소를 리턴
+
+ex)
+    $('h5').prevUntil('span').css('border', '2px solid red'); // h2 태그의 이전요소들 중 span 태그 전까지 선택
+
+## is(인자) ##
+-> 선택된 요소의 범위내의 인자와 동일한 요소가 있는지 찾음(있으면 true, 없으면 false 리턴)
+
+ex)
+    var result = $('h6').is('h6');

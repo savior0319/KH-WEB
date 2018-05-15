@@ -63,42 +63,38 @@
 <script>
     $(document).ready(function () {
         $('#btn').click(function () {
-            var print1 = [
-                [$('tr:nth-of-type(2)>td:nth-of-type(2)').html()],
-                [$('tr:nth-of-type(2)>td:nth-of-type(3)').html()],
-                [$('tr:nth-of-type(2)>td:nth-of-type(4)').html()]
-            ];
-            var print2 = [
-                [$('tr:nth-of-type(3)>td:nth-of-type(2)').html()],
-                [$('tr:nth-of-type(3)>td:nth-of-type(3)').html()],
-                [$('tr:nth-of-type(3)>td:nth-of-type(4)').html()]
-            ];
-            var print3 = [
-                [$('tr:nth-of-type(4)>td:nth-of-type(2)').html()],
-                [$('tr:nth-of-type(4)>td:nth-of-type(3)').html()],
-                [$('tr:nth-of-type(4)>td:nth-of-type(4)').html()]
-            ];
-            var print4 = [
-                [$('tr:nth-of-type(5)>td:nth-of-type(2)').html()],
-                [$('tr:nth-of-type(5)>td:nth-of-type(3)').html()],
-                [$('tr:nth-of-type(5)>td:nth-of-type(4)').html()]
-            ];
+            var array = [],
+                count1 = 0;
+            $('tr>td:nth-of-type(1)').nextAll().each(function (index, item) {
+                array.push($(item).html());
+            });
 
-            if ($('tr:nth-of-type(2)>td>input').is(':checked')) {
-                $('#result').append('이름 : ' + print1[0] + ' / 나이 : ' + print1[1] + ' / 주소 : ' + print1[
-                    2] + '<br>');
+            if ($('tr:nth-of-type(2)>td:nth-of-type(1)>input').is(":checked")) {
+                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                    ' / 주소 : ' +
+                    array[count1++] + '<br>');
+                count1 = 0;
             }
-            if ($('tr:nth-of-type(3)>td>input').is(':checked')) {
-                $('#result').append('이름 : ' + print2[0] + ' / 나이 : ' + print2[1] + ' / 주소 : ' + print2[
-                    2] + '<br>');
+            if ($('tr:nth-of-type(3)>td:nth-of-type(1)>input').is(":checked")) {
+                count1 += 3;
+                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                    ' / 주소 : ' +
+                    array[count1++] + '<br>');
+                count1 = 0;
             }
-            if ($('tr:nth-of-type(4)>td>input').is(':checked')) {
-                $('#result').append('이름 : ' + print3[0] + ' / 나이 : ' + print3[1] + ' / 주소 : ' + print3[
-                    2] + '<br>');
+            if ($('tr:nth-of-type(4)>td:nth-of-type(1)>input').is(":checked")) {
+                count1 += 6;
+                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                    ' / 주소 : ' +
+                    array[count1++] + '<br>');
+                count1 = 0;
             }
-            if ($('tr:nth-of-type(5)>td>input').is(':checked')) {
-                $('#result').append('이름 : ' + print4[0] + ' / 나이 : ' + print4[1] + ' / 주소 : ' + print4[
-                    2] + '<br>');
+            if ($('tr:nth-of-type(5)>td:nth-of-type(1)>input').is(":checked")) {
+                count1 += 9;
+                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                    ' / 주소 : ' +
+                    array[count1++] + '<br>');
+                count1 = 0;
             }
         });
     });

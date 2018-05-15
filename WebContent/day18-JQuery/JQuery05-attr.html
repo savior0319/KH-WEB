@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../img/dora.png" id="img" width="150px" height="160px">
+    <br>
+    <button id="btn">클릭</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var $img = $('#img');
+        var isFlag = false;
+        $('#btn').click(function () {
+            if (isFlag == false) {
+                $img.attr('width', '300px').attr('height', '320px');
+                $('#btn').html('삭제');
+                isFlag = true;
+            } else if (isFlag == true) {
+                $img.removeAttr('src');
+                $('img').remove();
+                $('#btn').remove();
+            }
+        });
+    });
+</script>
+
+</html>

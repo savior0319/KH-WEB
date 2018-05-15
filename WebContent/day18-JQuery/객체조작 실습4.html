@@ -64,37 +64,37 @@
     $(document).ready(function () {
         $('#btn').click(function () {
             var array = [],
-                count1 = 0;
+                count = 0;
             $('tr>td:nth-of-type(1)').nextAll().each(function (index, item) {
                 array.push($(item).html());
             });
 
             if ($('tr:nth-of-type(2)>td:nth-of-type(1)>input').is(":checked")) {
-                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                $('#result').append('이름 : ' + array[count++] + ' / 나이 : ' + array[count++] +
                     ' / 주소 : ' +
-                    array[count1++] + '<br>');
-                count1 = 0;
+                    array[count++] + '<br>');
+                count = 0;
             }
             if ($('tr:nth-of-type(3)>td:nth-of-type(1)>input').is(":checked")) {
-                count1 += 3;
-                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                count += 3;
+                $('#result').append('이름 : ' + array[count++] + ' / 나이 : ' + array[count++] +
                     ' / 주소 : ' +
-                    array[count1++] + '<br>');
-                count1 = 0;
+                    array[count++] + '<br>');
+                count = 0;
             }
             if ($('tr:nth-of-type(4)>td:nth-of-type(1)>input').is(":checked")) {
-                count1 += 6;
-                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                count += 6;
+                $('#result').append('이름 : ' + array[count++] + ' / 나이 : ' + array[count++] +
                     ' / 주소 : ' +
-                    array[count1++] + '<br>');
-                count1 = 0;
+                    array[count++] + '<br>');
+                count = 0;
             }
             if ($('tr:nth-of-type(5)>td:nth-of-type(1)>input').is(":checked")) {
-                count1 += 9;
-                $('#result').append('이름 : ' + array[count1++] + ' / 나이 : ' + array[count1++] +
+                count += 9;
+                $('#result').append('이름 : ' + array[count++] + ' / 나이 : ' + array[count++] +
                     ' / 주소 : ' +
-                    array[count1++] + '<br>');
-                count1 = 0;
+                    array[count++] + '<br>');
+                count = 0;
             }
         });
     });

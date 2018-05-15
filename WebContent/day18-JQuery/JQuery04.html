@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    .size {
+        font-size: 300%;
+        color: red;
+    }
+</style>
+
+<body>
+    <p>안녕하세요 저는 글자입니다</p>
+    <button id="btn">돋보기</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        
+        var isBtn = false;
+
+        $('#btn').click(function () {
+            if (isBtn == false) {
+                $('p').addClass('size');
+                $('#btn').html('원래대로');
+                isBtn = true;
+            } else if (isBtn == true) {
+                $('p').removeClass('size');
+                $('#btn').html('돋보기');
+                isBtn = false;
+            }
+        });
+    });
+</script>
+
+</html>

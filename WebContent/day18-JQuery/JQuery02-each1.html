@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li id="li1">
+            <ul>
+                <li>노민수</li>
+                <li>곽영훈</li>
+                <li>정지수</li>
+            </ul>
+        </li>
+        <li>Milk</li>
+        <li>Soda</li>
+    </ul>
+    <button id="btn">클릭</button>
+    <div id="result"></div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            var object = $('#li1').children().children();
+
+            $.each(object, function (index, item) {
+                // console.log('index 번호 : ' + index + ' | item 값 : ' + item.innerHTML);
+                // or
+                console.log($(item).html());
+            });
+        });
+    });
+</script>
+
+</html>

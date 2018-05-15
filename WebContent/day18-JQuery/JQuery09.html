@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        overflow: hidden;
+        height: auto;
+        border: 3px solid gray;
+        width: 150px;
+    }
+</style>
+
+<body>
+    <div>
+        <p id="p1">test1</p>
+        <p id="p2">test2</p>
+        <p id="p3">test3</p>
+        <p id="p4">test4</p>
+    </div>
+    <button id="btn1">btn1</button>
+    <button id="btn2">btn2</button>
+    <button id="btn3">btn3</button>
+    <button id="btn4">btn4</button>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        // $('#btn1').click(function () {
+        //     $('<span>추가1</span>').appendTo('#p1');
+        // });
+
+        // $('#btn2').click(function () {
+        //     $('<span>추가2</span>').prependTo('#p2');
+        // });
+
+        // $('#btn3').click(function () {
+        //     $('<span>추가3</span>').insertAfter('#p3');
+        // });
+
+        // $('#btn4').click(function () {
+        //     $('<span>추가4</span>').insertBefore('#p4');
+        // });
+
+
+        // $('#btn1').click(function () {
+        //     $('#p1').append('<span>추가1</span>');
+        // });
+
+        // $('#btn2').click(function () {
+        //     $('#p2').prepend('<span>추가2</span>');
+        // });
+
+        // $('#btn3').click(function () {
+        //     $('#p3').after('<span>추가3</span>');
+        // });
+
+        // $('#btn4').click(function () {
+        //     $('#p4').before('<span>추가4</span>');
+        // });
+
+
+        // 순서 변경
+        // $('#btn1').click(function () {
+        //     $('#p2').appendTo($('#p3'));
+        // });
+
+        $('#btn1').click(function () {
+            ($('#p1').clone()).appendTo('#p4');
+        });
+    });
+</script>
+
+</html>

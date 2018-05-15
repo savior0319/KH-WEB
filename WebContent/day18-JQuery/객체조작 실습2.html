@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+</head>
+
+<body>
+
+    <style>
+        .title {
+            background-color: black;
+            color: white;
+        }
+
+        .name {
+            background-color: yellow;
+        }
+
+        .age {
+            background-color: blue;
+        }
+
+        .addr {
+            background-color: grey;
+        }
+    </style>
+    문제2.
+    <br> 적용 버튼 클릭시 style이 적용될 수 있도록 하여라.
+    <br> 취소 버튼 클릭시 style이 취소될 수 있도록 하여라.
+    <br> (css 코드는 변경하지 않도록 함)
+    <br>
+
+    <table border="1px">
+        <tr>
+            <th>이름</th>
+            <th>나이</th>
+            <th>주소</th>
+        </tr>
+        <tr>
+            <td>홍길동</td>
+            <td>20</td>
+            <td>서울시</td>
+        </tr>
+        <tr>
+            <td>김말똥</td>
+            <td>30</td>
+            <td>경기도</td>
+        </tr>
+        <tr>
+            <td>고길똥</td>
+            <td>40</td>
+            <td>강원도</td>
+        </tr>
+        <tr>
+            <td>김지똥</td>
+            <td>50</td>
+            <td>인천광역시</td>
+        </tr>
+    </table>
+
+    <button id="btn2">적용</button>
+    <button id="reset">취소</button>
+
+
+    <script>
+        $(document).ready(function () {
+            $('#btn2').click(function () {
+                $('tr:nth-of-type(1)>th').css('background', 'black').css('color', 'white');
+                $('tr>td:nth-of-type(1)').css('background', 'yellow');
+                $('tr>td:nth-of-type(2)').css('background', 'blue');
+                $('tr>td:nth-of-type(3)').css('background', 'darkgray');
+            });
+
+            $('#reset').click(function () {
+                $('tr:nth-of-type(1)>th').css('background', 'white').css('color', 'black');
+                $('tr>td:nth-of-type(1)').css('background', 'white');
+                $('tr>td:nth-of-type(2)').css('background', 'white');
+                $('tr>td:nth-of-type(3)').css('background', 'white');
+            });
+        });
+    </script>
+
+</body>
+
+</html>

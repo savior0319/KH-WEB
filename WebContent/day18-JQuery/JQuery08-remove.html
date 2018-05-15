@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        width: 150px;
+        height: 210px;
+        border: 3px solid gray;
+    }
+</style>
+
+<body>
+    <div>
+        내용0
+        <p>내용1</p>
+        <p>내용2</p>
+        <p>내용3</p>
+        <p>내용4</p>
+        <p>내용5</p>
+    </div>
+    <button id="btn">출력</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#btn').click(function () {
+            // $('p').eq(prompt('삭제 할 번호 입력')).remove();
+            $('div').empty();
+        });
+    });
+</script>
+
+</html>

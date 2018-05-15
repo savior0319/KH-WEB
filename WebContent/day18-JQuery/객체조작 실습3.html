@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Insert title here</title>
-    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -17,111 +17,86 @@
             float: left;
         }
     </style>
-
     문제3
     <br> 다음 2개의 그림 중 선택한 후 복사 될 수 있도록 구현하여라
     <br>
     <fieldset style="width:300px; margin:30px">
         <legend>2개의 그림 중 선택하시오.</legend>
         <div id="img1" style="background-color:red;">
-
         </div>
         <div id="img2" style="background-color:blue;">
-
         </div>
     </fieldset>
-
     <fieldset style="width:800px;  margin:30px">
-
         <legend>복사되는 공간</legend>
-
         <div id="1th">
-
         </div>
         <div id="2th">
-
         </div>
         <div id="3th">
-
         </div>
         <div id="4th">
-
         </div>
         <div id="5th">
-
         </div>
         <div id="6th">
-
         </div>
         <div id="7th">
-
         </div>
     </fieldset>
-
     <button id="btn1"> 초기화 </button>
-
-    <script>
-        $(document).ready(function () {
-            var $img1 = $('#img1');
-            var $img2 = $('#img2');
-            var $1th = $('#1th');
-            var $2th = $('#2th');
-            var $3th = $('#3th');
-            var $4th = $('#4th');
-            var $5th = $('#5th');
-            var $6th = $('#6th');
-            var $7th = $('#7th');
-            var $btn1 = $('#btn1');
-            var save;
-
-            $img1.click(function () {
-                save = $img1.attr('style');
-
-            });
-
-            $img2.click(function () {
-                save = $img2.attr('style');
-            });
-
-            $1th.click(function () {
-                $1th.attr('style', save);
-            });
-
-            $2th.click(function () {
-                $2th.attr('style', save);
-            });
-
-            $3th.click(function () {
-                $3th.attr('style', save);
-            });
-
-            $4th.click(function () {
-                $4th.attr('style', save);
-            });
-
-            $5th.click(function () {
-                $5th.attr('style', save);
-            });
-
-            $6th.click(function () {
-                $6th.attr('style', save);
-            });
-
-            $7th.click(function () {
-                $7th.attr('style', save);
-            });
-
-            $btn1.click(function () {
-                $1th.attr('style', 'background:white');
-                $2th.attr('style', 'background:white');
-                $3th.attr('style', 'background:white');
-                $4th.attr('style', 'background:white');
-                $5th.attr('style', 'background:white');
-                $6th.attr('style', 'background:white');
-                $7th.attr('style', 'background:white');
-            });
-        });
-    </script>
 </body>
+
+<script>
+    $(document).ready(function () {
+        var $img1 = $('#img1'),
+            $img2 = $('#img2'),
+            $1th = $('#1th'),
+            $2th = $('#2th'),
+            $3th = $('#3th'),
+            $4th = $('#4th'),
+            $5th = $('#5th'),
+            $6th = $('#6th'),
+            $7th = $('#7th'),
+            $btn1 = $('#btn1'),
+            save;
+        $img1.click(function () {
+            save = $img1.attr('style');
+        });
+        $img2.click(function () {
+            save = $img2.attr('style');
+        });
+        $1th.click(function () {
+            $1th.attr('style', save);
+        });
+        $2th.click(function () {
+            $2th.attr('style', save);
+        });
+        $3th.click(function () {
+            $3th.attr('style', save);
+        });
+        $4th.click(function () {
+            $4th.attr('style', save);
+        });
+        $5th.click(function () {
+            $5th.attr('style', save);
+        });
+        $6th.click(function () {
+            $6th.attr('style', save);
+        });
+        $7th.click(function () {
+            $7th.attr('style', save);
+        });
+        $btn1.click(function () {
+            $1th.attr('style', 'background:white');
+            $2th.attr('style', 'background:white');
+            $3th.attr('style', 'background:white');
+            $4th.attr('style', 'background:white');
+            $5th.attr('style', 'background:white');
+            $6th.attr('style', 'background:white');
+            $7th.attr('style', 'background:white');
+        });
+    });
+</script>
 
 </html>

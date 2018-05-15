@@ -50,32 +50,19 @@
 
 <script>
     $(document).ready(function () {
-        var array1 = [],
-            array2 = [],
-            array3 = [],
-            array4 = [];
-
         $('#btn').click(function () {
-            $('tr:nth-of-type(2)>td').each(function (index, item) {
-                array1.push([$(item).html()]);
+            var array = [],
+                count = 0;
+
+            $('tr>td').each(function (index, item) {
+                if (index < $('td').length) {
+                    array.push($(item).html());
+                }
             });
-            $('tr:nth-of-type(3)>td').each(function (index, item) {
-                array2.push([$(item).html()]);
-            });
-            $('tr:nth-of-type(4)>td').each(function (index, item) {
-                array3.push([$(item).html()]);
-            });
-            $('tr:nth-of-type(5)>td').each(function (index, item) {
-                array4.push([$(item).html()]);
-            });
-            $('#span1').append('1 번째 학생이름 : ' + array1[0] + ' / 나이 : ' + array1[1] + ' / 주소 : ' +
-                array1[2] + '<br>');
-            $('#span1').append('2 번째 학생이름 : ' + array2[0] + ' / 나이 : ' + array2[1] + ' / 주소 : ' +
-                array2[2] + '<br>');
-            $('#span1').append('3 번째 학생이름 : ' + array3[0] + ' / 나이 : ' + array3[1] + ' / 주소 : ' +
-                array3[2] + '<br>');
-            $('#span1').append('4 번째 학생이름 : ' + array4[0] + ' / 나이 : ' + array4[1] + ' / 주소 : ' +
-                array4[2] + '<br>');
+            for (let i = 0; i < $('tr').length - 1; i++) {
+                $('#span1').append('이름 : ' + array[count++] + ' / 나이 : ' + array[count++] + ' / 주소 : ' +
+                    array[count++] + '<br>');
+            }
         });
     });
 </script>

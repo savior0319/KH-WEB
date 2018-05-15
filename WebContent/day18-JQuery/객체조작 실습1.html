@@ -49,77 +49,33 @@
 </body>
 
 <script>
-    var span1;
-    window.onload = function () {
-        span1 = document.getElementById('span1');
-    }
+    $(document).ready(function () {
+        var array1 = [],
+            array2 = [],
+            array3 = [],
+            array4 = [];
 
-    var td1_1 = $('tr:nth-of-type(2)>td:nth-of-type(1)');
-    var td1_2 = $('tr:nth-of-type(2)>td:nth-of-type(2)');
-    var td1_3 = $('tr:nth-of-type(2)>td:nth-of-type(3)');
-
-    var td2_1 = $('tr:nth-of-type(3)>td:nth-of-type(1)');
-    var td2_2 = $('tr:nth-of-type(3)>td:nth-of-type(2)');
-    var td2_3 = $('tr:nth-of-type(3)>td:nth-of-type(3)');
-
-
-    var td3_1 = $('tr:nth-of-type(4)>td:nth-of-type(1)');
-    var td3_2 = $('tr:nth-of-type(4)>td:nth-of-type(2)');
-    var td3_3 = $('tr:nth-of-type(4)>td:nth-of-type(3)');
-
-
-    var td4_1 = $('tr:nth-of-type(5)>td:nth-of-type(1)');
-    var td4_2 = $('tr:nth-of-type(5)>td:nth-of-type(2)');
-    var td4_3 = $('tr:nth-of-type(5)>td:nth-of-type(3)');
-    var array = [];
-
-    $('#btn').click(function () {
-        td1_1.each(function (index, item) {
-            span1.innerHTML += "1번째 학생 정보 : " + item.innerHTML;
-        });
-
-        td1_2.each(function (index, item) {
-            span1.innerHTML += " / 나이 : " + item.innerHTML;
-        });
-
-        td1_3.each(function (index, item) {
-            span1.innerHTML += " / 주소 : " + item.innerHTML + "<br>";
-        });
-
-        td2_1.each(function (index, item) {
-            span1.innerHTML += "2번째 학생 정보 : " + item.innerHTML;
-        });
-
-        td2_2.each(function (index, item) {
-            span1.innerHTML += " / 나이 : " + item.innerHTML;
-        });
-
-        td2_3.each(function (index, item) {
-            span1.innerHTML += " / 주소 : " + item.innerHTML + "<br>";
-        });
-
-        td3_1.each(function (index, item) {
-            span1.innerHTML += "3번째 학생 정보 : " + item.innerHTML;
-        });
-
-        td3_2.each(function (index, item) {
-            span1.innerHTML += " / 나이 : " + item.innerHTML;
-        });
-
-        td3_3.each(function (index, item) {
-            span1.innerHTML += " / 주소 : " + item.innerHTML + "<br>";
-        });
-
-        td4_1.each(function (index, item) {
-            span1.innerHTML += "4번째 학생 정보 : " + item.innerHTML;
-        });
-
-        td4_2.each(function (index, item) {
-            span1.innerHTML += " / 나이 : " + item.innerHTML;
-        });
-
-        td4_3.each(function (index, item) {
-            span1.innerHTML += " / 주소 : " + item.innerHTML + "<br>";
+        $('#btn').click(function () {
+            $('tr:nth-of-type(2)>td').each(function (index, item) {
+                array1.push([$(item).html()]);
+            });
+            $('tr:nth-of-type(3)>td').each(function (index, item) {
+                array2.push([$(item).html()]);
+            });
+            $('tr:nth-of-type(4)>td').each(function (index, item) {
+                array3.push([$(item).html()]);
+            });
+            $('tr:nth-of-type(5)>td').each(function (index, item) {
+                array4.push([$(item).html()]);
+            });
+            $('#span1').append('1 번째 학생이름 : ' + array1[0] + ' / 나이 : ' + array1[1] + ' / 주소 : ' +
+                array1[2] + '<br>');
+            $('#span1').append('2 번째 학생이름 : ' + array2[0] + ' / 나이 : ' + array2[1] + ' / 주소 : ' +
+                array2[2] + '<br>');
+            $('#span1').append('3 번째 학생이름 : ' + array3[0] + ' / 나이 : ' + array3[1] + ' / 주소 : ' +
+                array3[2] + '<br>');
+            $('#span1').append('4 번째 학생이름 : ' + array4[0] + ' / 나이 : ' + array4[1] + ' / 주소 : ' +
+                array4[2] + '<br>');
         });
     });
 </script>

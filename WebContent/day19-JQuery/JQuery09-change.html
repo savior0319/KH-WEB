@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="checkbox" name="" id="all">
+    <label>All</label>
+    <br>
+    <br>
+    <div id="checkItem">
+        <input type="checkbox" name="" id="A">
+        <label>A</label>
+        <input type="checkbox" name="" id="B">
+        <label>B</label>
+        <input type="checkbox" name="" id="C">
+        <label>C</label>
+    </div>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var object = $('#checkItem').children('input');
+
+        $('#all').change(function () {
+            if (this.checked == true) {
+                object.each(function (index, item) {
+                    item.checked = true;
+                });
+            } else {
+                object.each(function (index, item) {
+                    item.checked = false;
+                });
+            }
+        });
+
+        $('#checkItem').children().change(function () {
+            if (this.checked == true) {
+                $(this).next().css('color', 'red');
+                console.log($(this).next().html());
+
+            } else {
+                $(this).next().css('color', 'black');
+            }
+        });
+    });
+</script>
+
+</html>

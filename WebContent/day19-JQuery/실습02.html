@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+</style>
+
+<body>
+    <div>글작성</div>
+    <h1>작성 가능한 글자수 : 150</h1>
+    <textarea id="tarea" cols="70" rows="8" maxlength="150"></textarea>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var count = 150,
+            $h1 = $('h1'),
+            $tarea = $('#tarea');
+
+        $tarea.on('keyup', function () {
+            count = 150 - $tarea.val().length;
+            $h1.html('작성 가능한 글자수 : ' + count);
+            if (count <= 0) {
+                alert('최대 글자수 초과');
+                $h1.html('작성 가능한 글자수 : 0');
+            }
+        });
+    });
+</script>
+
+
+</html>

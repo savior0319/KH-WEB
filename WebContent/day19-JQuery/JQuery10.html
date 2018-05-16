@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        font-size: 16px;
+    }
+</style>
+
+<body>
+    <center>
+        <pre>
+        <label for="">회원가입</label>
+
+ID :   <input type="text" name="" id="id"><label></label>
+
+PW :   <input type="password" name="" id="pwd"><label></label>
+
+NAME : <input type="text" name="" id="name"><label></label>
+    </pre>
+    </center>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('input').focusin(function () {
+            switch ($(this).attr('id')) {
+                case 'id':
+                    $(this).next().html('<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp영어 숫자만 입력');
+                    break;
+                case 'pwd':
+                    $(this).next().html('<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp영어 숫자 특수문자 입력');
+                    break;
+                case 'name':
+                    $(this).next().html('<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp한글만 입력');
+                    break;
+            }
+        });
+
+        $('input').focusout(function () {
+            $(this).next().html('');
+        });
+    });
+</script>
+
+
+</html>

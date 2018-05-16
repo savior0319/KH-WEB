@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        border: 3px solid black;
+        width: 200px;
+        height: 200px;
+    }
+</style>
+
+<body>
+    <div>
+
+    </div>
+    <button id="btn">off</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var $btn = $('#btn'),
+            div = $('div'),
+            isFlag = false;
+
+        $btn.on('click', function () {
+            if (isFlag == false) {
+                $btn.html('on');
+                div.on('mouseenter', function () {
+                    div.css('background', 'red');
+                }).on('mouseout', function () {
+                    div.css('background', 'white');
+                });
+                isFlag = true;
+            } else if (isFlag == true) {
+                $btn.html('off');
+                div.off('mouseenter').off('mouseout');
+                isFlag = false;
+            }
+        });
+    });
+</script>
+
+</html>

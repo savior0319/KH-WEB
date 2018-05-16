@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        <a href="https://naver.com">네이버로 이동</a>
+        <button>On</button>
+    </h1>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var isSwitch = true,
+            aTag = $('a');
+
+        $('button').click(function () {
+            if (isSwitch == true) {
+                isSwitch = false;
+                $(this).text('off');
+                aTag.css('color', 'red');
+            } else {
+                isSwitch = true;
+                $(this).text('on');
+                aTag.css('color', 'blue');
+            }
+        });
+
+        aTag.click(function () {
+            if (isSwitch == false) {
+                event.preventDefault(); // 기본 이벤트 제거
+            }
+        })
+    });
+</script>
+
+</html>

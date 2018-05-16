@@ -1,0 +1,134 @@
+──────────────────────────────────────────────────────────────────────────────────────
+@ 이벤트
+-> 사용자가 마우스를 클릭하거나 마우스 움직여 특정 화면 위로 가져가거나
+키보드를 누르는 행위를 이벤트라고 부름
+-> JQuery는 event 객체를 통해서 이벤트를 제어할 수 있음
+
+※ 다양한 이벤트 참조
+-> https://www.w3schools.com/jquery/jquery_ref_events.asp
+
+──────────────────────────────────────────────────────────────────────────────────────
+
+@ 이벤트 연결 방법
+$('선택자').method(function(event){});
+
+ex) hover 이벤트
+$('선택자').hover(inFuction.outFunction);
+
+ex)
+    $(document).ready(function () {
+        var h1 = $('h1');
+        h1.hover((function () {
+            $(this).addClass('hoverTest');
+        }), function () {
+            $(this).removeClass('hoverTest');
+        });
+    });
+
+## trigger() ##
+-> 이벤트를 강제적으로 발생 시킴 
+
+ex)
+    $(document).ready(function () {
+            var $btn1 = $('button:eq(0)'),
+                $btn2 = $('button:eq(1)'),
+                $btn3 = $('button:eq(2)'),
+                $btn4 = $('button:eq(3)');
+
+            $btn1.click(function () {
+                lvUp($('span:eq(0)'));
+            });
+
+            $btn2.click(function () {
+                lvUp($('span:eq(1)'));
+            });
+
+            $btn3.click(function () {
+                lvUp($('span:eq(2)'));
+            });
+
+            $btn4.click(function () {
+                $btn1.trigger('click');
+                $btn2.trigger('click');
+                $btn3.trigger('click');
+            });
+
+            function lvUp(el) {
+                var value = Number(el.html()) + 1;
+                el.text(value);
+            }
+        });
+
+──────────────────────────────────────────────────────────────────────────────────────        
+
+@ 기본 이벤트 제거, 이벤트 전달을 막는 메소드
+-> event.preventDefault()    기본 이벤트 제거
+-> event.stopPropagation()   이벤트 전달 제거
+
+
+## event.preventDefault() ##
+-> 이벤트를 제거 하는 메소드
+
+ex)
+    $(document).ready(function () {
+        var isSwitch = true;
+        $('button').click(function () {
+            if (isSwitch == true) {
+                isSwitch = false;
+                $(this).text('off');
+            } else {
+                isSwitch = true;
+                $(this).text('on');
+            }
+        });
+
+        $('a').click(function () {
+            if (isSwitch == false) {
+                event.preventDefault(); // 기본 이벤트 제거
+                alert('On 상태에서 클릭하세요');
+            }
+        })
+    });
+
+## event.stopPropagation() ##
+-> 이벤트 버블링을 막는 메소드
+
+ex)
+ $(document).ready(function () {
+        $('button').click(function () {
+            alert('참 잘');
+            event.stopPropagation(); // 이벤트 버블링 제거
+            // or
+            // return false;
+        });
+
+        $('div').click(function () {
+            alert('참 잘 div');
+        });
+    });
+
+──────────────────────────────────────────────────────────────────────────────────────
+
+## on() && off() 메소드 ##
+-> 이벤트를 연결 및 해제 하는 메소드
+
+ex)
+    $(document).ready(function () {
+        var $btn1 = $('#btn1');
+
+        $('#btn2').click(function () {
+            $btn1.html('Click');
+            $btn1.on('click', function () {
+                alert('이벤트 추가');
+            });
+        });
+
+        $('#btn3').click(function () {
+            $btn1.html('Not');
+            $btn1.off('click');
+        });
+    });
+
+──────────────────────────────────────────────────────────────────────────────────────
+
+

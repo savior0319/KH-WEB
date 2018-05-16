@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button>레벨업</button> 기사 :
+    <span>0</span> Level
+    <br>
+    <button>레벨업</button> 마법사 :
+    <span>0</span> Level
+    <br>
+    <button>레벨업</button> 궁수 :
+    <span>0</span> Level
+    <br>
+    <button>All</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var $btn1 = $('button:eq(0)'),
+            $btn2 = $('button:eq(1)'),
+            $btn3 = $('button:eq(2)'),
+            $btn4 = $('button:eq(3)');
+
+        $btn1.click(function () {
+            lvUp($('span:eq(0)'));
+        });
+
+        $btn2.click(function () {
+            lvUp($('span:eq(1)'));
+        });
+
+        $btn3.click(function () {
+            lvUp($('span:eq(2)'));
+        });
+
+        $btn4.click(function () {
+            $btn1.trigger('click');
+            $btn2.trigger('click');
+            $btn3.trigger('click');
+        });
+
+        function lvUp(el) {
+            var value = Number(el.html()) + 1;
+            el.text(value);
+        }
+    });
+</script>
+
+</html>

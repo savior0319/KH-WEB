@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn1">Not</button>
+    <button id="btn2">Event add</button>
+    <button id="btn3">Event remove</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var $btn1 = $('#btn1');
+
+        $('#btn2').click(function () {
+            $btn1.html('Click');
+            $btn1.on('click', function () {
+                alert('이벤트 추가');
+            });
+        });
+
+        $('#btn3').click(function () {
+            $btn1.html('Not');
+            $btn1.off('click');
+        });
+    });
+</script>
+
+</html>

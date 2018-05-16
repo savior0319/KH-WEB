@@ -250,7 +250,69 @@ slideUp()       문서 객체를 슬라이드 효과와 함께 사라지게 함
 slideToggle()   slideDown() 메소드와 slideUp() 메소드를 번갈아 가면서 실행 함
 fadeIn()        문서 객체를 선명하게 하며 보여줌
 fadeOut()       문서 객체를 흐리게 하며 사라지게 함
-fadeToggle()    fadeIn() 메소드와 fadeOut() 메소드를 번갈아 가면서 실행 함         
+fadeToggle()    fadeIn() 메소드와 fadeOut() 메소드를 번갈아 가면서 실행 함  
+
+사용 구문
+1. $('선택자').메소드명();
+2. $('선택자').메소드명([speed]);
+3. $('선택자').메소드명([speed], [easing], [callback]);
+
+speed       실행 속도(밀리세컨) / 숫자값 또는 slow, fase(문자열)
+easing      변경되는 지점별 속도 / linear, swing 가능
+    ※ linear : 일정한 속도
+    ※ swing : 처음과 끝부분은 속도가 느리고 중간에는 빨라짐
+callback : 메소드 실행 후 실행할 함수       
+
+
+## hide $ show ##
+
+hide : 문서 객체를 작게 하며 사라짐
+show : 문서 객체를 크게 하며 보여줌
+
+
+## toggle() 메소드 ##
+-> show() 메소드와 hide() 메소드를 번갈아 가면서 실행 함
+
+ex)
+    $(document).ready(function () {
+        var img = $('img');
+
+        $('#hide').click(function () {
+            img.hide(1000);
+        });
+
+        $('#show').click(function () {
+            img.show(1000);
+        });
+
+        var isFlag = false;
+        $('#toggle').click(function () {
+            img.toggle(1000);
+            if (isFlag == false) {
+                document.getElementById('toggle').innerHTML = '보이기';
+                isFlag = true;
+            } else if (isFlag == true) {
+                document.getElementById('toggle').innerHTML = '감추기';
+                isFlag = false;
+            }
+        });
+    });
+
+──────────────────────────────────────────────────────────────────────────────────────
+
+@ animate() 메소드
+-> 현재의 css속성을 설정한 값으로 차츰 변경되는 효과를 주는 메소드
+
+사용 구문
+
+$('선택자').animate({CSS속성 설정}, [시간], [linear|swing].[함수]);
+
+CSS속성 : 객체로 지정, 속성명 : 속성 값
+시간 : 숫자(ms), slow, fast // default 값 = 400ms
+구간별 속도 
+- linear : 일정한 속도
+- swing : 처음과 끝 부분은 속도가 느리고 중간에는 빨라짐
+함수 : 애니메이션 종료 후 실행 할 함수
 
 ──────────────────────────────────────────────────────────────────────────────────────
 

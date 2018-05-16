@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    img {
+        width: 300px;
+        height: 300px;
+    }
+</style>
+
+<body>
+    <img src="../img/dora.png">
+    <br>
+    <button id="hide">확대</button>
+    <button id="show">원본</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var img = $('img');
+
+        $('#hide').click(function () {
+            img.animate({
+                height: '500px',
+                width: '500px'
+            });
+        });
+
+        $('#show').click(function () {
+            img.animate({
+                width: '300px',
+                height: '300px'
+            });
+        });
+    });
+</script>
+
+</html>

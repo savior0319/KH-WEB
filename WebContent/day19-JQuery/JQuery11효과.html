@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="../img/dora.png">
+
+    <br>
+    <button id="hide">hide</button>
+    <button id="show">show</button>
+    <button id="toggle">감추기</button>
+</body>
+
+<script>
+    $(document).ready(function () {
+        var img = $('img');
+
+        $('#hide').click(function () {
+            img.hide(1000);
+        });
+
+        $('#show').click(function () {
+            img.show(1000);
+        });
+
+        var isFlag = false;
+        $('#toggle').click(function () {
+            img.fadeToggle(1000);
+            if (isFlag == false) {
+                document.getElementById('toggle').innerHTML = '보이기';
+                isFlag = true;
+            } else if (isFlag == true) {
+                document.getElementById('toggle').innerHTML = '감추기';
+                isFlag = false;
+            }
+        });
+    });
+</script>
+
+</html>

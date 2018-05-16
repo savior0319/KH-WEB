@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        margin: 20px;
+    }
+
+    div {
+        border: 1px solid gray;
+        background: hotpink;
+        border-radius: 10px;
+        width: 300px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        color: blue;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    div:hover {
+        background: rgb(240, 162, 201);
+    }
+
+    .contents {
+        border: 1px solid lightgrey;
+        width: 300px;
+        height: 100px;
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>slide 사용하기</h1>
+    <br>
+    <div>첫 번째 메뉴</div>
+    <p class="contents">내용</p>
+    <div>두 번째 메뉴</div>
+    <p class="contents">내용</p>
+    <div>세 번째 메뉴</div>
+    <p class="contents">내용</p>
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('div').on('click', function () {
+            $(this).next().slideToggle(300);
+        });
+    });
+</script>
+
+</html>

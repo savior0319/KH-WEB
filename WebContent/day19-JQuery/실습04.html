@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../JS/jquery-3.3.1.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <th>번호</th>
+            <th>제목</th>
+            <th>조회수</th>
+            <th>작성일자</th>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>3번제목</td>
+            <td>0</td>
+            <td>11-07-13</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>2번제목</td>
+            <td>0</td>
+            <td>11-07-12</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1번제목</td>
+            <td>0</td>
+            <td>11-07-11</td>
+        </tr>
+    </table>
+    선택된 행 :
+    <span id="s1"></span> /
+    <span id="s2"></span> /
+    <span id="s3"></span> /
+    <span id="s4"></span>
+</body>
+
+<script>
+    $(document).ready(function () {
+
+        $('tr').click(function () {
+            var index = ($('tr').index(this)),
+                array = [];
+            if (index == 0) {
+                event.preventDefault();
+            } else {
+                white();
+                $('tr:nth-of-type(' + (index + 1) + ')').children().css('background', 'red');
+                array.push([$('tr:nth-of-type(' + (index + 1) + ')>td:eq(0)').html()], [$(
+                    'tr:nth-of-type(' + (index + 1) + ')>td:eq(1)').html()], [
+                    $('tr:nth-of-type(' + (index + 1) + ')>td:eq(2)').html()
+                ], [$('tr:nth-of-type(' + (index + 1) + ')>td:eq(3)').html()]);
+                $('#s1').html(array[0]), $('#s2').html(array[1]), $('#s3').html(array[2]), $('#s4').html(
+                    array[3]);
+            }
+        });
+    });
+
+    function white() {
+        $('tr').children().css('background', 'white');
+    }
+</script>
+
+</html>
